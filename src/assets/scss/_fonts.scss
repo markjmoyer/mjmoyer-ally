@@ -1,0 +1,33 @@
+// import all fonts using @font-face
+
+@font-face {
+	font-family: 'Stainless-Regular';
+  src:  url('/fonts/Stainless-Regular/Stainless-Regular.svg') format('svg');
+  src:  url('/fonts/Stainless-Regular/Stainless-Regular.eot') format('eot');
+  src:  url('/fonts/Stainless-Regular/Stainless-Regular.woff') format('woff');
+	src:  url('/fonts/Stainless-Regular/Stainless-Regular.ttf') format('truetype');
+
+	font-weight: normal;
+	font-style: normal; 
+}
+
+@font-face {
+	font-family: 'FontAwesome';
+  src:  url('/fonts/FontAwesome/fontawesome-webfont.svg') format('svg');
+  src:  url('/fonts/FontAwesome/fontawesome-webfont.eot') format('eot');
+  src:  url('/fonts/FontAwesome/fontawesome-webfont.woff') format('woff');
+	src:  url('/fonts/FontAwesome/fontawesome-webfont.ttf') format('truetype');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+$font-stainless-regular: "Stainless-Regular", "Arial", "Helvetica", sans-serif;
+$font-helvetica: Helvetica;
+$font-default: sans-serif;
+$font-awesome: FontAwesome;
+
+.font-awesome { font-family: $font-awesome }
+
+.font-helvetica { font-family: $font-helvetica }
+.font-default { font-family: $font-default }
