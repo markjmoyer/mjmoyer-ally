@@ -1,5 +1,4 @@
-# NASCAR HTML Cut-Ups
-
+# Front-end Development Project -Ally
 
 ## Project Dependencies
 
