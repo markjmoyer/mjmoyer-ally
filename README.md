@@ -1,4 +1,4 @@
-# Front-end Development Project -Ally
+# Front-end Development Project by Mark
 
 ## Project Dependencies
 
@@ -8,8 +8,9 @@ Following are the dependencies and packages used in developing this website:
 * [NodeJS](http://nodejs.org/) - Server-Side JavaScript
 * [Gulp](http://gulpjs.com/) - A JavaScript Task Runner
 * [jQuery](http://jquery.com/) - The Write Less, Do More JavaScript Library
+* [jQuery Cookie](https://github.com/carhartl/jquery-cookie) - A jQuery Plugin by Klaus Hartl
 * [Modernizr](http://modernizr.com/) - Detects HTML5 and CSS3 features in the user’s browser
-* [SASS](http://sass.org/) - CSS Pre-Processor
+* [SASS](https://sass-lang.com/) - CSS Pre-Processor utilizing SCSS Syntax
 
 ## Setting Up A Development Environment
 
@@ -44,13 +45,14 @@ Pre-Processing, Linting, Test Running, etc.
 
 ### Finishing Your install
 Once you have installed Node and Gulp, you're ready to initialize your project by running
-"npm install" from the command line inside your target directory.
+"npm install" from the command line inside your target directory. As long as the package.json is
+located in the root of your project, npm install will recognize and install each dependency listed.
 
     $> npm install
 
 ### Viewing Your Local Website
-I prefer to use an NPM package called http-server(https://www.npmjs.com/package/http-server). Once
-you run the command http-server, the command line will give you the server IP Address(s).
+I prefer to use an NPM package server called http-server(https://www.npmjs.com/package/http-server). Once
+you run the command http-server, the command line will give you the server IP Address(s) which to use.
 Assuming you have setup a local webserver, and assuming that you have cloned the source code for
 this project into your web root, you should be able to access the website at:
 
@@ -59,7 +61,7 @@ this project into your web root, you should be able to access the website at:
 ## Using Gulp Task Runner
 
 ### Configuring Gulp
-Gulp uses the "gulpfile.js" file located in the root to configure the actions performed when the
+Gulp uses "gulpfile.js" located in the root to configure the actions performed when the
 `gulp` command is run. Gulp uses the "package.json" file located in the root to set the Application
 Name, Version Number and the package dependencies that exist for supporting the commands in the
 gulpfile.
@@ -70,35 +72,36 @@ Once completed, this task will perform the following actions:
 
 * Compile SASS/SCSS into CSS
 * [Lint](http://csslint.net/) your Compiled CSS
-* [Minify] the Compiled CSS into a *.min.css file
+* [Minify] the Compiled CSS into a *.min.css file - NOT USED FOR THIS PROJECT
 * [Lint](http://jshint.com/) your JavaScript
 * [Concatenate] all of the JS into a single file
 * [Uglify] (minify) the JS into a *.min.js file
 
 To run your Gulp tasks, simply do the following:
     $> cd <DIRECTORY_PATH_TO_YOUR_GULPFILE.JS>
-    $> gulp
+    $> Run `gulp` command
 
-Once executed, Gulp will run through all of the tasks that you have configured, and will output the
-results for each step into the command line window.
+Once executed, Gulp will run through all of the tasks configured, and will output the results for each
+step into the command line window. A wonderful perspective.
 
 ### Developing with Gulp
 While developing applications and websites using Gulp, it's useful to automatically run Gulp tasks
-when certain files are modified. In this project, we use "grunt watch" to look for changes in
-specific files and perform Grunt build tasks when they are modified. For example, if you edit a
+when certain files are modified. In this project, we use "gulp watch" to look for changes in
+specific files and perform Gulp build tasks when they are modified. For example, if you edit a
 *.scss file in the __/src/assets/scss/__ directory, then the watcher will automatically compile the
-SCSS code into CSS, then generate the file into the target distribution directory. When you reload
+SCSS code into CSS, then generate the file into the target distribution __/dist/__ directory. When you reload
 your browser, your changes are immediately visible as they have been compiled and built in the background.
+Cacheing can be an issue. With debugger window window open, right click the refresh icon in Chrome browser
+and click `Empty Cache and Hard Reload`.
 
-In order to launch gulp watch, all you need to do is open a command-line terminal, cd to your working
-directory and type `gulp watch`:
+I've configured this to run the watch task only by running `gulp' not `gulp watch`. In order to launch gulp
+watch, all you need to do is open a command-line terminal, cd to your working
+directory and type `gulp`, `gulp watch` is not off limits:
 
     $> cd / into your project directory /
-    $> run `gulp watch`...
+    $> run `gulp` or `gulp watch`...
     $> Task "watch" running...
     $> Waiting for changes...
-
-&nbsp;
 
 ## Website Structure
 
@@ -144,4 +147,4 @@ new folder is not created, the issue will be in gulpfile.js
 #### Deploying Code
 
 Once Gulp has completed, the code inside the __/dist/__ folder is ready for deployment. Run index.html
-from __/dist/__
+from __/dist/__ ALWAYS TO SEE THE PROJECT. DEVELOP FROM __/src/__.
