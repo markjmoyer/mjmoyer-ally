@@ -1,0 +1,47 @@
+.overlay {
+  background-color: $overlay-white;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.welcome-modal {
+  background-color: #c1d8ff;
+  border: 1px solid $med-black;
+  border-radius: 8px;
+  color: $med-black;
+  left: 0;
+  margin: 0 auto;
+  // max-height: 330px;
+  max-width: 660px;
+  // min-height: 220px;
+  min-width: 300px;
+  padding: 20px 35px;
+  position: fixed;
+  right: 0;
+  top: 120px;
+  // width: 100%;
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  p {
+    line-height: 22px;
+    padding: 10px 0;
+  }
+  span {
+    cursor: pointer;
+    height:30px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    width: 30px;
+
+    i {
+    font-family: $font-awesome;
+    font-size: 28px;
+
+  }
+    }
+}

@@ -5,7 +5,6 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var uglifycss = require('uglifycss');
-var cleanCSS = require('gulp-clean-css');
 
 gulp.task('default', function() {
  //place code for default task here
@@ -31,27 +30,25 @@ gulp.task('scripts', function() {
     .pipe(uglify())
     .pipe(gulp.dest('dist/assets/js'));
 });
-// run copy-fonts task
-gulp.task('copy-fonts', function() {
-  return gulp.src('src/assets/fonts/**/*.{ttf,woff,woff2,eot,otf,svg}')
-   .pipe(gulp.dest('./dist/assets/fonts'));
-});
 // run copy-files task
 gulp.task('copy-files', function() {
-  return gulp.src('src/index.html')
-    .pipe(gulp.dest('./dist/'));
+  gulp.src('src/index.html')
+  .pipe(gulp.dest('./dist/'));
+  gulp.src('src/assets/images/*')
+  .pipe(gulp.dest('./dist/assets/images'));
+  gulp.src('src/assets/css/*.css')
+  .pipe(gulp.dest('./dist/assets/css'));
+  gulp.src('src/assets/fonts/**/*.{ttf,woff,woff2,eot,otf,svg}')
+   .pipe(gulp.dest('./dist/assets/fonts'));
 });
-// run minify css task
-gulp.task('minify-css', function() {
-  return gulp.src('src/assets/css/styles.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('./dist/assets/css'));
-});
+
 // run watch task - listen for changes
 gulp.task('watch', function() {
   gulp.watch('src/assets/js/*.js', ['lint', 'scripts']);
   gulp.watch('src/assets/scss/*.scss', ['sass']);
   gulp.watch('src/*.html', ['copy-files']);
+  gulp.watch('src/assets/images/*', ['copy-files']);
+  gulp.watch('src/assets/css/*.css', ['copy-files']);
 });
 
-gulp.task('default', ['lint', 'sass', 'scripts', 'copy-fonts', 'copy-files', 'minify-css', 'watch']);
+gulp.task('default', ['lint', 'sass', 'scripts', 'copy-files', 'watch']);

@@ -1,0 +1,29 @@
+label {
+  display: block;
+  text-align: left;
+}
+
+input {
+  font-size: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &::placeholder {
+    color: green;
+  }
+
+  &[type='text'],
+  &[type='password'] {
+    border: 1px solid $grey;
+    padding: .75rem;
+    width: 90%;
+  }
+
+  &[type='submit'] {
+    background-color: $blue-button;
+    color: $white;
+    cursor: pointer;
+    padding: .75rem .95rem;
+  }
+}

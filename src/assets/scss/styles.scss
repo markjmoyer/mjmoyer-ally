@@ -1,6 +1,7 @@
-//partials go here
-
-@import 'colors';
+//partials
+@import 'reset';
+@import 'variables';
 @import 'fonts';
-@import 'base-layout';
-@import 'base-build'; 
+@import 'base';
+@import 'form';
+@import 'welcome-modal';

@@ -16,7 +16,7 @@ Following are the dependencies and packages used in developing this website:
 Not much is needed to get started building inside this project other than a text editor and a
 web server, but there are a few prerequisites that you'll have to install to use the build tools.
 
-### Installing Git - only if contributing
+### Installing Git - only if cloning or contributing
 Visit the [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)downloads page and
 select the installer for your particular environment. Run the installer and you're all set to
 start using the Git version control system.
@@ -49,6 +49,8 @@ Once you have installed Node and Gulp, you're ready to initialize your project b
     $> npm install
 
 ### Viewing Your Local Website
+I prefer to use an NPM package called http-server(https://www.npmjs.com/package/http-server). Once
+you run the command http-server, the command line will give you the server IP Address(s).
 Assuming you have setup a local webserver, and assuming that you have cloned the source code for
 this project into your web root, you should be able to access the website at:
 
@@ -68,13 +70,12 @@ Once completed, this task will perform the following actions:
 
 * Compile SASS/SCSS into CSS
 * [Lint](http://csslint.net/) your Compiled CSS
-* Minify the Compiled CSS into a *.min.css file
+* [Minify] the Compiled CSS into a *.min.css file
 * [Lint](http://jshint.com/) your JavaScript
-* Concatenate all of the JS into a single file
-* Uglify (minify) the JS into a *.min.js file
+* [Concatenate] all of the JS into a single file
+* [Uglify] (minify) the JS into a *.min.js file
 
 To run your Gulp tasks, simply do the following:
-
     $> cd <DIRECTORY_PATH_TO_YOUR_GULPFILE.JS>
     $> gulp
 
@@ -89,12 +90,12 @@ specific files and perform Grunt build tasks when they are modified. For example
 SCSS code into CSS, then generate the file into the target distribution directory. When you reload
 your browser, your changes are immediately visible as they have been compiled and built in the background.
 
-In order to launch Grunt watch, all you need to do is open a command-line terminal, cd to your working
+In order to launch gulp watch, all you need to do is open a command-line terminal, cd to your working
 directory and type `gulp watch`:
 
-    $> cd /Library/WebServer/Documents/nascar-html-cutups/default/
-    $> gulp watch
-    $> Running "watch" task
+    $> cd / into your project directory /
+    $> run `gulp watch`...
+    $> Task "watch" running...
     $> Waiting for changes...
 
 &nbsp;
@@ -115,62 +116,30 @@ You will use /src directory instead.
 #### SCSS / CSS
 When authoring CSS for this project, you should be authoring using SCSS or SASS - writing \*.scss
 files into the __/src/assets/scss/__ directory. These files are then parsed into CSS by the Gulp
-tasks described above.
+sass task described above.
 
 #### JavaScript
 When authoring JavaScript files for this project, you should be saving those files into the
 __/src/assets/js/__ directory, with each file being named appropriate to its behavior or purpose.
-When it's time to deploy, these files will be concatenated and minified into one single file,
-complete with a version number and stored in the __/dist/assets/dist/js/__ directory.
+When it's time to deploy, these files will be concatenated and minified into one single file.
 
 #### Images
-Nothing really special about images in this website, but you should be using \*.png
-files as a default. Sometimes a \*.gif or \*.jpg may be required, but by and large
-you should be building with \*.png's.
+Nothing really special about images in this website. The __/src/__ image folder and contents are copied
+to __/dist/__
 
 ### Node Modules
 When you install Node Packages using NPM, those resources will be installed in the __/node_modules/__
-directory. For example, the Gulp package that you installed with NPM lives in this location.
+directory. For example, the Gulp package that you installed with NPM lives in this location. The
+node_modules folder is ignored by git. Use your package.json and npm install to get up and running.
 
 ### HTML
-Your HTML resources are stored in the __/src/__ directory of the website, and once the HTML includes
-parser runs, the files are copied into the __/dist/__ directory for deployment. This project uses the
-[Gulp Simple Include](https://www.npmjs.org/package/grunt-simple-include) package to enable the use
-of includes in static HTML files. By using a similar syntax to the Bower Components declarations, you
-can inject HTML or other content directly into your templates during the build process.
-
-    <html>
-    <head>
-      <title>Page Title</title>
-    </head>
-    <body>
-      <!-- include: 'includes/meta.html' -->
-      <!-- include: 'includes/header.html' -->
-      <!-- include: 'includes/footer.html' -->
-    </body>
-    </html>
-
-
-#### Variables in HTML
-You can write variables into your templates. Using the example include
-above, we could write the following content into the __meta.html__ file:
-
-    <title>@@title</title>
-    <meta name="description" content="@@description">
-    <meta name="keywords" content="@@keywords">
-
-Simply by defining the values in our __package.json__ file:
-
-    "title": "NASCAR HTML Cutups",
-    "description": "This is an HTML Generator for the NASCAR HTML Cutups",
-    "keywords": "NASCAR,nascar.com,HTML,templates",
-
-&nbsp;
+Your HTML resources are stored in the __/src/__ directory of the website, and once the tasks are run,
+the files are copied into the __/dist/__ directory for deployment.
 
 #### Issues and/or Corruption
 In most cases, simply deleting the entire __/dist/__ folder and running 'gulp' in the command line
-will create another __/dist/__ folder. When nothing seems to work, do this. If a new folder is not
-created, the issue will undoubtedly be in gulpfile.js
+will create another __/dist/__ folder and fix the issue. When nothing seems to work, do this. If a
+new folder is not created, the issue will be in gulpfile.js
 
 #### Deploying Code
 
