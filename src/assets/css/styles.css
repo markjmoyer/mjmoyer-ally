@@ -119,6 +119,7 @@ input {
   input::placeholder {
     color: green; }
   input[type='text'], input[type='password'] {
+    background-color: #efefed;
     border: 1px solid #ccc;
     padding: .75rem;
     width: 90%; }

@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Ally Front-end Developer Project</title>
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/font-awesome.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="assets/js/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
 </head>
 <body>
 
@@ -23,37 +22,38 @@
       <h1>Front-end Developer Project</h1>
 
       <div class="login-container">
-        <form action="#">
+        <form onSubmit="return submitFormEntry()">
           <p>
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" placeholder="Username" />
+            <label for="userNameInput">Username:</label>
+            <input type="text" name="userNameInput" id="userNameInput" placeholder="Enter username" required />
           </p>
 
           <p>
             <label for="pwdInput">Password:</label>
-            <input type="password" name="pwdInput" id="pwdInput" onclick="pwdInput()" require />
+            <input type="password" name="pwdInput" id="pwdInput" required />
           </p>
 
           <p>
-            <input type="submit" name="submit" id="submit" />
+            <button type="submit">Submit</button>
           </p>
         </form>
       </div>
 
     </div>
   </main>
-  <div class="overlay">&nbsp;
-<div class="welcome-modal">
-  <span class="close-modal-btn"><i class="fa fa-close"></i></span>
-  <h2>Thanks for reviewing my work!</h2>
-  <p>Your time means a bunch to me and I understand the careful attention you're giving my code and demeanor.</p>
-  <p>This file is built and compiled using Gulp! A time-saver for me that allows me to automate much of the front-end workflow for us!</p>
-  <p>Please, launch index.html from the ../dist/.. folder to view the results in the browser. When choosing to review Mark's code, please refer to files in the ../src/.. folder. Setup instructions/documentation are in README.md</p>
-  <p>Thanks again for your time, the opportunity and (of course) your careful consideration with regards to my work on this project.</p>
-  <author>Mark</author>
-  <p>
-    PS: This site uses a cookie allowing for the "Welcome Modal" once per 24hrs. Hardly GDPR compliant but developed with you in mind.
-  </p>
-</div></div>
+<!-- <div class="overlay">&nbsp;
+  <div class="welcome-modal">
+    <span class="close-modal-btn"><i class="fa fa-close"></i></span>
+    <h2>Thanks for reviewing my work!</h2>
+    <p>Your time means a bunch to me and I understand the careful attention you're giving my code and demeanor.</p>
+    <p>This file is built and compiled using Gulp! A time-saver for me that allows me to automate much of the front-end workflow for us!</p>
+    <p>Please, launch index.html from the ../dist/.. folder to view the results in the browser. When choosing to review Mark's code, please refer to files in the ../src/.. folder. Setup instructions/documentation are in README.md</p>
+    <p>Thanks again for your time, the opportunity and (of course) your careful consideration with regards to my work on this project.</p>
+    <author>Mark</author>
+    <p>
+      PS: This site uses a cookie allowing for the "Welcome Modal" once per 24hrs. Hardly GDPR compliant but developed with you in mind.
+    </p>
+</div> -->
+</div>
 </body>
 </html>

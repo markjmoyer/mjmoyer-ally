@@ -10,15 +10,26 @@ jQuery(document).ready(function() {
    }
 
   // welcome-modal scripting
-  jQuery('.welcome-modal').show();
-  jQuery('.close-modal-btn').on('click', function() {
-    jQuery('.welcome-modal, .overlay').hide();
-  });
-  
-  // user input scripting
-  function pwdInput() {
-      var pwdInput = document.getElementById("pwdInput").value;
-      alert(pwdInput);
-  }
+  // jQuery('.welcome-modal').show();
+  // jQuery('.close-modal-btn').on('click', function(e) {
+  //   e.preventDefault();
+  //   jQuery('.welcome-modal, .overlay').hide();
+  // });
 
+
+});
+
+
+// user input scripting
+//function submitFormEntry() {
+    var userName = document.getElementById("userNameInput").value;
+    var pwdInput = document.getElementById("userPwdInput").value;
+
+    alert("Welcome" +userName+ ", " + pwdInput);
+    console.log(submitFormEntry());
+//}
+
+jQuery('#submitMyForm').on('click',function(e) {
+e.preventDefault();
+  console.log(submitFormEntry());
 });

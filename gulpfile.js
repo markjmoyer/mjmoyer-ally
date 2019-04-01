@@ -38,6 +38,8 @@ gulp.task('copy-files', function() {
   .pipe(gulp.dest('./dist/assets/images'));
   gulp.src('src/assets/css/*.css')
   .pipe(gulp.dest('./dist/assets/css'));
+  gulp.src('src/assets/js/*.js')
+  .pipe(gulp.dest('./dist/assets/js'));
   gulp.src('src/assets/fonts/**/*.{ttf,woff,woff2,eot,otf,svg}')
    .pipe(gulp.dest('./dist/assets/fonts'));
 });
