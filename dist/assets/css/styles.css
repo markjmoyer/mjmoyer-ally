@@ -46,122 +46,184 @@ table {
   border-spacing: 0; }
 
 @font-face {
-  font-family: 'Stainless-Regular';
-  src: url("../assets/fonts/Stainless-Regular/Stainless-Regular.eot") format("eot");
-  src: url("../assets/fonts/Stainless-Regular/Stainless-Regular.woff") format("woff");
-  src: url("../assets/fonts/Stainless-Regular/Stainless-Regular.woff2") format("woff2");
-  src: url("../assets/fonts/Stainless-Regular/Stainless-Regular.ttf") format("truetype");
-  src: url("../assets/fonts/Stainless-Regular/Stainless-Regular.svg") format("svg");
+  font-family: 'Helvetica-Neue-Light';
+  src: url("/assets/fonts/Helvetica-Neue/helveticaneue-regular.svg") format("svg");
+  src: url("/assets/fonts/Helvetica-Neue/helveticaneue-regular.eot");
+  src: url("/assets/fonts/Helvetica-Neue/helveticaneue-regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Helvetica-Neue/helveticaneue-regular.woff") format("woff"), url("/assets/fonts/Helvetica-Neue/helveticaneue-regular.woff2") format("woff2"), url("/assets/fonts/Helvetica-Neue/helveticaneue-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Helvetica-Neue-Regular';
+  src: url("/assets/fonts/Helvetica-Neue/helveticaneuelt.svg") format("svg");
+  src: url("/assets/fonts/Helvetica-Neue/helveticaneuelt.eot");
+  src: url("/assets/fonts/Helvetica-Neue/helveticaneuelt.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Helvetica-Neue/helveticaneuelt.woff") format("woff"), url("/assets/fonts/Helvetica-Neue/helveticaneuelt.woff2") format("woff2"), url("/assets/fonts/Helvetica-Neue/helveticaneuelt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Helvetica-Neue-Bold';
+  src: url("/assets/fonts/Helvetica-Neue/helveticaneuebd.svg") format("svg");
+  src: url("/assets/fonts/Helvetica-Neue/helveticaneuebd.eot");
+  src: url("/assets/fonts/Helvetica-Neue/helveticaneuebd.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Helvetica-Neue/helveticaneuebd.woff") format("woff"), url("/assets/fonts/Helvetica-Neue/helveticaneuebd.woff2") format("woff2"), url("/assets/fonts/Helvetica-Neue/helveticaneuebd.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url("/assets/fonts/FontAwesome/fontawesome-webfont.eot") format("eot");
-  src: url("/assets/fonts/FontAwesome/fontawesome-webfont.woff") format("woff");
-  src: url("/assets/fonts/FontAwesome/fontawesome-webfont.woff2") format("woff2");
-  src: url("/assets/fonts/FontAwesome/fontawesome-webfont.ttf") format("truetype");
-  src: url("/assets/fonts/FontAwesome/fontawesome-webfont.svg") format("svg");
+  src: url("/assets/fonts/FontAwesome/fontawesome-webfont.eot") format("eot"), url("/assets/fonts/FontAwesome/fontawesome-webfont.woff") format("woff"), url("/assets/fonts/FontAwesome/fontawesome-webfont.woff2") format("woff2"), url("/assets/fonts/FontAwesome/fontawesome-webfont.ttf") format("truetype"), url("/assets/fonts/FontAwesome/fontawesome-webfont.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 .font-awesome {
   font-family: FontAwesome; }
 
-.font-helvetica {
-  font-family: Helvetica; }
+.font-helvetica-neue {
+  font-family: "Helvetica-Neue-Regular"; }
 
-.font-default {
-  font-family: sans-serif; }
+.font-helvetica-neue-light {
+  font-family: "Helvetica-Neue-Light"; }
+
+.font-helvetica-neue-bold {
+  font-family: "Helvetica-Neue-Bold"; }
+
+.row {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+  .row .column {
+    float: left; }
+  .row .content {
+    width: 70%; }
+  .row .sidebar {
+    margin-left: 1em;
+    width: 28.25%; }
+
+header {
+  background-color: cornflowerblue;
+  margin-bottom: 32px;
+  overflow: hidden; }
+
+.container .logo {
+  float: left; }
+  .container .logo a {
+    display: block;
+    padding-bottom: 3px;
+    padding-top: 1px; }
+
+.container nav.main-navigation {
+  float: right;
+  margin-right: -15px; }
+  .container nav.main-navigation ul li {
+    float: left;
+    padding: 5px 15px;
+    transition: all .3s; }
+    .container nav.main-navigation ul li:hover {
+      background-color: #006899;
+      transition: all .3s; }
+    .container nav.main-navigation ul li a {
+      color: #f9f8f9;
+      display: block;
+      font-family: "Helvetica-Neue-Regular";
+      padding: 8px 0 5px;
+      text-decoration: none; }
 
 :root {
   font-size: 16px; }
 
+* {
+  box-sizing: border-box; }
+
 body {
-  font-family: "Stainless-Regular", Arial, Helvetica, sans-serif; }
+  color: #505050;
+  font-family: "Helvetica-Neue-Regular"; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 15px 0; }
+
+.page-container {
+  width: 100%; }
 
 .container {
   margin: 0 auto;
-  max-width: 1124px;
+  max-width: 960px;
   width: 100%; }
-  .container h1,
-  .container h2,
-  .container h3,
-  .container h4,
-  .container h5,
-  .container h6,
-  .container p {
-    margin: 0;
-    padding: 0; }
-  .container h1 {
-    text-align: center;
-    font-size: 28px;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: 20px; }
-  .container p {
-    color: #464646;
+
+.content h1 {
+  color: #650360;
+  font-family: "Helvetica-Neue-Regular";
+  font-size: 36px;
+  padding: 0 0 20px;
+  text-align: left;
+  text-transform: capitalize; }
+
+.content h2 {
+  font-size: 28px; }
+  .content h2 span {
+    border-right: 1px solid #505050;
+    font-family: "Helvetica-Neue-Light";
+    margin-right: 10px;
     padding: 10px; }
-  .container .login-container {
-    margin: 0 auto;
-    max-width: 550px;
-    min-width: 300px; }
 
-label {
-  display: block;
-  text-align: left; }
+.content h3 {
+  font-family: "Helvetica-Neue-Bold";
+  font-size: 14px;
+  padding: 15px 0; }
 
-input {
-  font-size: 18px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
-  input::placeholder {
-    color: green; }
-  input[type='text'], input[type='password'] {
-    background-color: #efefed;
-    border: 1px solid #ccc;
-    padding: .75rem;
-    width: 90%; }
-  input[type='submit'] {
-    background-color: #6495ed;
-    color: #fff;
-    cursor: pointer;
-    padding: .75rem .95rem; }
-
-.overlay {
-  background-color: rgba(255, 255, 255, 0.6);
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%; }
-
-.welcome-modal {
-  background-color: #c1d8ff;
-  border: 1px solid #464646;
-  border-radius: 8px;
+.content p {
   color: #464646;
-  left: 0;
-  margin: 0 auto;
-  max-width: 660px;
-  min-width: 300px;
-  padding: 20px 35px;
-  position: fixed;
-  right: 0;
-  top: 120px; }
-  .welcome-modal h2 {
-    font-size: 24px;
-    font-weight: 500; }
-  .welcome-modal p {
-    line-height: 22px;
-    padding: 10px 0; }
-  .welcome-modal span {
-    cursor: pointer;
-    height: 30px;
+  font-family: "Helvetica-Neue-Regular";
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 22px;
+  padding: 10px 0; }
+
+.content ul {
+  list-style: disc;
+  padding-left: 15px; }
+  .content ul li {
+    padding: 5px 0; }
+    .content ul li a {
+      color: #505050;
+      text-decoration: none; }
+
+.content .callout {
+  background-color: #bbd8c4;
+  margin-bottom: 40px;
+  margin-top: 35px;
+  padding: 15px;
+  position: relative;
+  width: 100%; }
+  .content .callout h3 {
+    color: #650360;
+    padding: 5px 0 0; }
+  .content .callout .callout-copy {
+    width: 550px; }
+  .content .callout .callout-img {
     position: absolute;
     right: 20px;
-    top: 15px;
-    width: 30px; }
-    .welcome-modal span i {
-      font-family: FontAwesome;
-      font-size: 28px; }
+    top: -80px; }
+
+.sidebar button.login {
+  background-color: #650360;
+  color: #f9f8f9;
+  font-family: "Helvetica-Neue-Bold";
+  font-size: 18px;
+  margin-bottom: 35px;
+  padding: 7px 0;
+  width: 100%; }
+
+.sidebar .tab-container ul.nav-tabs {
+  overflow: hidden; }
+  .sidebar .tab-container ul.nav-tabs li {
+    background-color: whitesmoke;
+    float: left;
+    padding: 15px 20px; }
+    .sidebar .tab-container ul.nav-tabs li:hover {
+      background-color: #bbd8c4; }
+
+.sidebar .tab-container .tab-content {
+  background-color: whitesmoke;
+  padding: 15px;
+  width: 100%; }

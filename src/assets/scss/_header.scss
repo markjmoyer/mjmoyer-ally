@@ -1,0 +1,43 @@
+header {
+  background-color: $blue-background;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.container {
+  .logo {
+    float: left;
+
+    a {
+      display: block;
+      padding-bottom: 3px;
+      padding-top: 1px;
+    }
+  }
+
+  nav.main-navigation {
+    float: right;
+    margin-right: -15px;
+
+      ul {
+        li {
+        float: left;
+        padding: 5px 15px;
+        transition: all .3s;
+
+        &:hover {
+          background-color: $dk-blue-background;
+          transition: all .3s;
+        }
+
+        a {
+          color: $white;
+          display: block;
+          font-family: $helvetica-neue-regular;
+          padding: 8px 0 5px;
+          text-decoration: none;
+        }
+        }
+      }
+  }
+}

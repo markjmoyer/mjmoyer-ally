@@ -34,6 +34,8 @@ gulp.task('scripts', function() {
 gulp.task('copy-files', function() {
   gulp.src('src/index.html')
   .pipe(gulp.dest('./dist/'));
+  gulp.src('src/favicon.ico')
+  .pipe(gulp.dest('./dist/'));
   gulp.src('src/assets/images/*')
   .pipe(gulp.dest('./dist/assets/images'));
   gulp.src('src/assets/css/*.css')
@@ -49,7 +51,7 @@ gulp.task('watch', function() {
   gulp.watch('src/assets/js/*.js', ['lint', 'scripts']);
   gulp.watch('src/assets/scss/*.scss', ['sass']);
   gulp.watch('src/*.html', ['copy-files']);
-  gulp.watch('src/assets/images/*', ['copy-files']);
+  gulp.watch('src/assets/images/**', ['copy-files']);
   gulp.watch('src/assets/css/*.css', ['copy-files']);
 });
 

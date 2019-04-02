@@ -2,42 +2,78 @@
   font-size: 16px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: $font-stainless-regular;
+  color: $grey;
+  font-family: $helvetica-neue-regular;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 15px 0;
+}
+
+.page-container {
+  width: 100%;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 1124px;
+  max-width: 960px;
   width: 100%;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    margin: 0;
-    padding: 0;
-  }
+.content {
 
   h1 {
-    text-align: center;
+    color: $purple-text;
+    font-family: $helvetica-neue-regular;
+    font-size: 36px;
+    padding: 0 0 20px;
+    text-align: left;
+    text-transform: capitalize;
+  }
+
+  h2 {
     font-size: 28px;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: 20px;
+
+    span {
+      border-right: 1px solid #505050;
+      font-family: $helvetica-neue-light;
+      margin-right: 10px;
+      padding: 10px;
+    }
+  }
+
+  h3 {
+    font-family: $helvetica-neue-bold;
+    font-size: 14px;
+    padding: 15px 0
   }
 
   p {
     color: $med-black;
-    padding: 10px;
+    font-family: $helvetica-neue-regular;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 22px;
+    padding: 10px 0;
   }
 
-  .login-container {
-    margin: 0 auto;
-    max-width: 550px;
-    min-width: 300px;
+  ul {
+    list-style: disc;
+    padding-left: 15px;
+
+    li {
+      padding: 5px 0;
+
+      a {
+        color: $grey;
+        text-decoration: none;
+      }
+    }
   }
 }

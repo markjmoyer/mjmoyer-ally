@@ -1,32 +1,56 @@
-// import all fonts using @font-face
-@font-face { font-family: 'Stainless-Regular';
-	src:  url('../assets/fonts/Stainless-Regular/Stainless-Regular.eot') format('eot');
-	src:  url('../assets/fonts/Stainless-Regular/Stainless-Regular.woff') format('woff');
-	src:  url('../assets/fonts/Stainless-Regular/Stainless-Regular.woff2') format('woff2');
-	src:  url('../assets/fonts/Stainless-Regular/Stainless-Regular.ttf') format('truetype');
-	src:  url('../assets/fonts/Stainless-Regular/Stainless-Regular.svg') format('svg');
-
+@font-face {
+	font-family: 'Helvetica-Neue-Light';
+	src: url('/assets/fonts/Helvetica-Neue/helveticaneue-regular.svg') format('svg');
+	src: url('/assets/fonts/Helvetica-Neue/helveticaneue-regular.eot');
+  src: url('/assets/fonts/Helvetica-Neue/helveticaneue-regular.eot?#iefix') format('embedded-opentype'),
+		 	 url('/assets/fonts/Helvetica-Neue/helveticaneue-regular.woff') format('woff'),
+		   url('/assets/fonts/Helvetica-Neue/helveticaneue-regular.woff2') format('woff2'),
+		 	 url('/assets/fonts/Helvetica-Neue/helveticaneue-regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Helvetica-Neue-Regular';
+	src: url('/assets/fonts/Helvetica-Neue/helveticaneuelt.svg') format('svg');
+	src: url('/assets/fonts/Helvetica-Neue/helveticaneuelt.eot');
+  src: url('/assets/fonts/Helvetica-Neue/helveticaneuelt.eot?#iefix') format('embedded-opentype'),
+		 	 url('/assets/fonts/Helvetica-Neue/helveticaneuelt.woff') format('woff'),
+		   url('/assets/fonts/Helvetica-Neue/helveticaneuelt.woff2') format('woff2'),
+		 	 url('/assets/fonts/Helvetica-Neue/helveticaneuelt.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Helvetica-Neue-Bold';
+	src: url('/assets/fonts/Helvetica-Neue/helveticaneuebd.svg') format('svg');
+	src: url('/assets/fonts/Helvetica-Neue/helveticaneuebd.eot');
+  src: url('/assets/fonts/Helvetica-Neue/helveticaneuebd.eot?#iefix') format('embedded-opentype'),
+		 	 url('/assets/fonts/Helvetica-Neue/helveticaneuebd.woff') format('woff'),
+		   url('/assets/fonts/Helvetica-Neue/helveticaneuebd.woff2') format('woff2'),
+		 	 url('/assets/fonts/Helvetica-Neue/helveticaneuebd.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'FontAwesome';
-  src:  url('/assets/fonts/FontAwesome/fontawesome-webfont.eot') format('eot');
-  src:  url('/assets/fonts/FontAwesome/fontawesome-webfont.woff') format('woff');
-	src:  url('/assets/fonts/FontAwesome/fontawesome-webfont.woff2') format('woff2');
-	src:  url('/assets/fonts/FontAwesome/fontawesome-webfont.ttf') format('truetype');
-	src:  url('/assets/fonts/FontAwesome/fontawesome-webfont.svg') format('svg');
+  src: url('/assets/fonts/FontAwesome/fontawesome-webfont.eot') format('eot'),
+  		 url('/assets/fonts/FontAwesome/fontawesome-webfont.woff') format('woff'),
+			 url('/assets/fonts/FontAwesome/fontawesome-webfont.woff2') format('woff2'),
+			 url('/assets/fonts/FontAwesome/fontawesome-webfont.ttf') format('truetype'),
+			 url('/assets/fonts/FontAwesome/fontawesome-webfont.svg') format('svg');
 
 	font-weight: normal;
 	font-style: normal;
 }
 
-$font-stainless-regular: 'Stainless-Regular', Arial, Helvetica, sans-serif;
-$font-helvetica: Helvetica;
+$helvetica-neue-light: 'Helvetica-Neue-Light';
+$helvetica-neue-regular: 'Helvetica-Neue-Regular';
+$helvetica-neue-bold: 'Helvetica-Neue-Bold';
 $font-default: sans-serif;
 $font-awesome: FontAwesome;
 
 .font-awesome { font-family: $font-awesome; }
-.font-helvetica { font-family: $font-helvetica; }
-.font-default { font-family: $font-default; }
+.font-helvetica-neue { font-family: $helvetica-neue-regular; }
+.font-helvetica-neue-light { font-family: $helvetica-neue-light; }
+.font-helvetica-neue-bold { font-family: $helvetica-neue-bold; }

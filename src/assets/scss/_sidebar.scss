@@ -1,0 +1,38 @@
+.sidebar {
+
+  button {
+
+    &.login {
+      background-color: $purple-text;
+      color: $white;
+      font-family: $helvetica-neue-bold;
+      font-size: 18px;
+      margin-bottom: 35px;
+      padding: 7px 0;
+      width: 100%;
+    }
+  }
+
+  .tab-container {
+
+    ul.nav-tabs {
+      overflow: hidden;
+
+      li {
+        background-color: $light-grey;
+        float: left;
+        padding: 15px 20px;
+
+        &:hover {
+          background-color: $green-background;
+        }
+      }
+    }
+
+    .tab-content {
+      background-color: $light-grey;
+      padding: 15px;
+      width: 100%;
+    }
+  }
+}

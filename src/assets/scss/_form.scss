@@ -10,7 +10,7 @@ input {
   appearance: none;
 
   &::placeholder {
-    color: green;
+    color: $blue-background;
   }
 
   &[type='text'],
@@ -22,7 +22,7 @@ input {
   }
 
   &[type='submit'] {
-    background-color: $blue-button;
+    background-color: $blue-background;
     color: $white;
     cursor: pointer;
     padding: .75rem .95rem;
