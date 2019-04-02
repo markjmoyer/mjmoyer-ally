@@ -23,7 +23,10 @@
         float: left;
         padding: 15px 20px;
 
-        &:hover {
+        // &:hover {
+        //   background-color: $green-background;
+        // }
+        &.inactive {
           background-color: $green-background;
         }
       }
@@ -31,8 +34,40 @@
 
     .tab-content {
       background-color: $light-grey;
-      padding: 15px;
+      padding: 25px 15px 15px;
       width: 100%;
+
+      &.news {
+
+
+        ul {
+        margin-bottom: 35px;
+        }
+
+        ul li {
+          color: $grey;
+          font-family: $helvetica-neue-regular;
+          font-size: 16px;
+          line-height: 22px;
+
+          &:first-child {
+            padding-bottom: 5px;
+          }
+        }
+
+        ul li a {
+          color: $blue-text;
+          font-family: $helvetica-neue-bold;
+          text-decoration: none;
+        }
+      }
+
+      &.archive a {
+        color: $blue-text;
+        font-family: $helvetica-neue-bold;
+        line-height: 26px;
+        text-decoration: none;
+      }
     }
   }
 }

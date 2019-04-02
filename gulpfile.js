@@ -9,7 +9,7 @@ var uglifycss = require('uglifycss');
 gulp.task('default', function() {
  //place code for default task here
 });
-// run lint task
+// run jslint task
 gulp.task('lint', function() {
   return gulp.src('src/assets/js/*.js')
     .pipe(jshint())
@@ -40,8 +40,10 @@ gulp.task('copy-files', function() {
   .pipe(gulp.dest('./dist/assets/images'));
   gulp.src('src/assets/css/*.css')
   .pipe(gulp.dest('./dist/assets/css'));
-  gulp.src('src/assets/js/*.js')
-  .pipe(gulp.dest('./dist/assets/js'));
+  gulp.src('src/assets/data/*.json')
+  .pipe(gulp.dest('./dist/assets/data'));
+  // gulp.src('src/assets/js/*.js')
+  // .pipe(gulp.dest('./dist/assets/js'));
   gulp.src('src/assets/fonts/**/*.{ttf,woff,woff2,eot,otf,svg}')
    .pipe(gulp.dest('./dist/assets/fonts'));
 });
@@ -53,6 +55,7 @@ gulp.task('watch', function() {
   gulp.watch('src/*.html', ['copy-files']);
   gulp.watch('src/assets/images/**', ['copy-files']);
   gulp.watch('src/assets/css/*.css', ['copy-files']);
+  gulp.watch('src/assets/data/*.json', ['copy-files']);
 });
 
 gulp.task('default', ['lint', 'sass', 'scripts', 'copy-files', 'watch']);

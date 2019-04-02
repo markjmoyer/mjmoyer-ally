@@ -1,0 +1,31 @@
+.bank-data-table {
+  background-color: $lt-green;
+  margin-top: 35px;
+  width: 100%;
+
+.table-row {
+  padding: 15px;
+
+  span {
+    display: inline-block;
+
+    &.bank-name {
+      width: 400px;
+    }
+
+    &.bank-apy {
+      width: 120px;
+    }
+
+    &.bank-earnings {
+      text-align: right;
+      width: 120px;
+    }
+  }
+&:nth-child(even) {
+  background-color: $dk-green;
+}
+
+}
+
+}

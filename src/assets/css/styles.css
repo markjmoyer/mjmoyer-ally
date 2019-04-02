@@ -94,6 +94,7 @@ table {
   .row .column {
     float: left; }
   .row .content {
+    margin-bottom: 80px;
     width: 70%; }
   .row .sidebar {
     margin-left: 1em;
@@ -220,10 +221,51 @@ h1, h2, h3, h4, h5, h6 {
     background-color: whitesmoke;
     float: left;
     padding: 15px 20px; }
-    .sidebar .tab-container ul.nav-tabs li:hover {
+    .sidebar .tab-container ul.nav-tabs li.inactive {
       background-color: #bbd8c4; }
 
 .sidebar .tab-container .tab-content {
   background-color: whitesmoke;
-  padding: 15px;
+  padding: 25px 15px 15px;
+  width: 100%; }
+  .sidebar .tab-container .tab-content.news ul {
+    margin-bottom: 35px; }
+  .sidebar .tab-container .tab-content.news ul li {
+    color: #505050;
+    font-family: "Helvetica-Neue-Regular";
+    font-size: 16px;
+    line-height: 22px; }
+    .sidebar .tab-container .tab-content.news ul li:first-child {
+      padding-bottom: 5px; }
+  .sidebar .tab-container .tab-content.news ul li a {
+    color: #328fc2;
+    font-family: "Helvetica-Neue-Bold";
+    text-decoration: none; }
+  .sidebar .tab-container .tab-content.archive a {
+    color: #328fc2;
+    font-family: "Helvetica-Neue-Bold";
+    line-height: 26px;
+    text-decoration: none; }
+
+.bank-data-table {
+  background-color: #eef5f0;
+  margin-top: 35px;
+  width: 100%; }
+  .bank-data-table .table-row {
+    padding: 15px; }
+    .bank-data-table .table-row span {
+      display: inline-block; }
+      .bank-data-table .table-row span.bank-name {
+        width: 400px; }
+      .bank-data-table .table-row span.bank-apy {
+        width: 120px; }
+      .bank-data-table .table-row span.bank-earnings {
+        text-align: right;
+        width: 120px; }
+    .bank-data-table .table-row:nth-child(even) {
+      background-color: #ddebe1; }
+
+footer {
+  background-color: #e7e8e9;
+  overflow: hidden;
   width: 100%; }

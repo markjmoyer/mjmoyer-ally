@@ -41,7 +41,7 @@ To install Gulp, open a command-line terminal and run the command `npm install -
 complete guide to setting up Gulp, visit [Getting Started](https://gulpjs.com/docs/en/getting-started/quick-start) guide. Gulp is used to perform all of the tasks that help make modern websites work: Minification, Concatenation,
 Pre-Processing, Linting, Test Running, etc.
 
-    $> npm install -global gulp-cli
+    $> npm install -g gulp-cli
 
 ### Finishing Your install
 Once you have installed Node and Gulp, you're ready to initialize your project by running
@@ -63,8 +63,8 @@ this project into your web root, you should be able to access the website at:
 ### Configuring Gulp
 Gulp uses "gulpfile.js" located in the root to configure the actions performed when the
 `gulp` command is run. Gulp uses the "package.json" file located in the root to set the Application
-Name, Version Number and the package dependencies that exist for supporting the commands in the
-gulpfile.
+Name, Version Number and package dependencies that exist for supporting the commands in
+gulpfile.js.
 
 ### Building with Gulp
 From the command-line, in the root directory of the project, run the command `gulp`
@@ -74,7 +74,7 @@ Once completed, this task will perform the following actions:
 * [Lint](http://csslint.net/) your Compiled CSS
 * [Minify] the Compiled CSS into a *.min.css file - NOT USED FOR THIS PROJECT
 * [Lint](http://jshint.com/) your JavaScript
-* [Concatenate] all of the JS into a single file
+* [Concatenate] all of the JS into a single file - NOT USED FOR THIS PROJECT
 * [Uglify] (minify) the JS into a *.min.js file
 
 To run your Gulp tasks, simply do the following:
@@ -95,8 +95,8 @@ Cacheing can be an issue. With debugger window window open, right click the refr
 and click `Empty Cache and Hard Reload`.
 
 I've configured this to run the watch task only by running `gulp' not `gulp watch`. In order to launch gulp
-watch, all you need to do is open a command-line terminal, cd to your working
-directory and type `gulp`, `gulp watch` is not off limits:
+watch, all you need to do is open a command-line terminal, cd to your working directory and type `gulp`,
+`gulp watch` is not off limits:
 
     $> cd / into your project directory /
     $> run `gulp` or `gulp watch`...
@@ -120,6 +120,9 @@ You will use /src directory instead.
 When authoring CSS for this project, you should be authoring using SCSS or SASS - writing \*.scss
 files into the __/src/assets/scss/__ directory. These files are then parsed into CSS by the Gulp
 sass task described above.
+
+#### Data (JSON)
+The data consumed by this website. The __/src/__ data folder and contents are copied to __/dist/__
 
 #### JavaScript
 When authoring JavaScript files for this project, you should be saving those files into the
