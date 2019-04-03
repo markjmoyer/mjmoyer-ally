@@ -116,26 +116,26 @@ Website resources such as images, stylesheets, JavaScripts, etc. are all located
 directory in the root of the project. Within the Assets directory, you will find sub-directories
 for each of these resources:
 
-#### DIST (Distribution)
+### DIST (Distribution)
 Files that have been concatenated, minified and prepared for final inclusion in the website are
 stored here in context-specific directories. Files are written here by the Gulp tasks described
 above. When authoring CSS or JavaScript, you should never write files directly into this directory.
 You will use /src directory instead.
 
-#### SCSS / CSS
+### SCSS / CSS
 When authoring CSS for this project, you should be authoring using SCSS or SASS - writing \*.scss
 files into the __/src/assets/scss/__ directory. These files are then parsed into CSS by the Gulp
 sass task described above.
 
-#### Data (JSON)
+### Data (JSON)
 The data consumed by this website. The __/src/__ data folder and contents are copied to __/dist/__
 
-#### JavaScript
+### JavaScript
 When authoring JavaScript files for this project, you should be saving those files into the
 __/src/assets/js/__ directory, with each file being named appropriate to its behavior or purpose.
 When it's time to deploy, these files will be concatenated and minified into one single file.
 
-#### Images
+### Images
 Nothing really special about images in this website. The __/src/__ image folder and contents are copied
 to __/dist/__
 
@@ -148,12 +148,12 @@ node_modules folder is ignored by git. Use your package.json and npm install to 
 Your HTML resources are stored in the __/src/__ directory of the website, and once the tasks are run,
 the files are copied into the __/dist/__ directory for deployment.
 
-#### Issues and/or Corruption
+### Issues and/or Corruption
 In most cases, simply deleting the entire __/dist/__ folder and running 'gulp' in the command line
 will create another __/dist/__ folder and fix the issue. When nothing seems to work, do this. If a
 new folder is not created, the issue will be in gulpfile.js
 
-#### Deploying Code
+### Deploying Code
 
 Once Gulp has completed, the code inside the __/dist/__ folder is ready for deployment. Run index.html
 from __/dist/__ ALWAYS TO SEE THE PROJECT. DEVELOP FROM __/src/__.
