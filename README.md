@@ -16,8 +16,6 @@ Following are the dependencies and packages used in developing this website:
 * [NodeJS](http://nodejs.org/) - Server-Side JavaScript
 * [Gulp](http://gulpjs.com/) - A JavaScript Task Runner
 * [jQuery](http://jquery.com/) - The Write Less, Do More JavaScript Library
-* [jQuery Cookie](https://github.com/carhartl/jquery-cookie) - A jQuery Plugin by Klaus Hartl
-* [Modernizr](http://modernizr.com/) - Detects HTML5 and CSS3 features in the user’s browser
 * [SASS](https://sass-lang.com/) - CSS Pre-Processor utilizing SCSS Syntax
 
 ## Setting Up A Development Environment
