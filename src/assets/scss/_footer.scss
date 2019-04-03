@@ -10,6 +10,10 @@ footer {
     overflow: hidden;
 
       nav.main-navigation.footer {
+
+        ul li {
+          padding: 1px 15px
+        }
         ul li a {
           color: #328fc2;
           padding: 0;
@@ -40,15 +44,16 @@ footer {
     text-align: center;
     width: 100%;
   }
+
   footer {
-    nav.main-navigation.footer {
+    .container nav.main-navigation.footer {
       float: none;
       margin: 0 auto;
       width: 320px;
 
-    ul li {
-      padding: 4px;
+      ul li {
+        padding: 1px 4px;
+      }
     }
-  }
   }
 }
