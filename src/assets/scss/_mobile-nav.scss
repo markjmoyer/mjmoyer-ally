@@ -16,7 +16,8 @@ nav.main-navigation {
   }
   header .container {
     nav.main-navigation {
-      border-bottom: 1px solid #cccccc;
+      background-color: $white;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, .7);
       display: none;
       padding: 15px 0;
       position: absolute;
@@ -24,19 +25,22 @@ nav.main-navigation {
 
       ul {
         li {
-          background-color: #ffffff;
+          background-color: $white;
           float: none;
           width: 100%;
 
           &:hover {
             background-color: $blue-background;
-            color: $white;
           }
 
           a {
             color: $black;
             padding-left: 15px;
             text-align: left;
+
+            &:hover {
+              color: $white;
+            }
           }
         }
       }

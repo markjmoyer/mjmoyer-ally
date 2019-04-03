@@ -1,12 +1,14 @@
 form {
   p {
-    padding: 10px 0
+    padding: 10px 0;
+    text-align: right;
   }
 
   label {
     display: inline-block;
     font-family: $helvetica-neue-bold;
     font-size: 14px;
+    padding-right: 20px;
     text-align: left;
   }
 
@@ -16,29 +18,34 @@ form {
 
     &[type='text'],
     &[type='password'] {
-      background-color: #efefed;
-      border: 1px solid $grey;
+      background-color: $white;
+      border: 1px solid $blue-text;
       padding: .75rem;
-      width: 87%;
+      width: 77%;
     }
 
     &[type='submit'] {
-      background-color: $blue-background;
+      background-color: $purple-text;
       color: $white;
       cursor: pointer;
-
+      float: right;
+      margin-top: 20px;
       padding: .75rem .95rem;
-    }
-  }
-
-
-  p.login-btn {
-    text-align: right;
-
-    button.login {
-      margin-bottom: 0;
-      margin-right:7px;
       width: 140px;
     }
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 480px) {
+  form p {
+    text-align: left;
+  }
+
+  form label {
+    padding-bottom: 5px;
+  }
+
+  form input[type='text'], form input[type='password'] {
+    width: 100%;
   }
 }

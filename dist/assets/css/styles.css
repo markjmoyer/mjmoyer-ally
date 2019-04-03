@@ -387,7 +387,7 @@ footer {
     margin: 0 auto;
     width: 320px; }
     footer nav.main-navigation.footer ul li {
-      padding: 5px; } }
+      padding: 4px; } }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.7);
@@ -395,64 +395,76 @@ footer {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9; }
+  z-index: 2; }
   .overlay .login-modal {
     background-color: #f9f8f9;
     border: 1px solid #464646;
     color: #464646;
     left: 0;
     margin: 0 auto;
-    max-width: 660px;
-    min-width: 300px;
+    width: 447px;
     padding: 30px;
     position: fixed;
     right: 0;
-    top: 120px; }
+    top: 120px;
+    z-index: 3; }
     .overlay .login-modal .login-container h2 {
       font-family: "Helvetica-Neue-Light";
       font-size: 28px;
       padding: 15px 0 30px; }
-    .overlay .login-modal span {
+    .overlay .login-modal a.close-modal {
       cursor: pointer;
       height: 30px;
       position: absolute;
       right: 20px;
       top: 15px;
       width: 30px; }
-      .overlay .login-modal span i {
+      .overlay .login-modal a.close-modal i {
         color: #328fc2;
         font-family: FontAwesome;
         font-size: 28px; }
 
+@media screen and (min-width: 300px) and (max-width: 480px) {
+  .overlay .login-modal {
+    width: 310px; }
+    .overlay .login-modal .login-container h2 {
+      font-size: 21px; } }
+
 form p {
-  padding: 10px 0; }
+  padding: 10px 0;
+  text-align: right; }
 
 form label {
   display: inline-block;
   font-family: "Helvetica-Neue-Bold";
   font-size: 14px;
+  padding-right: 20px;
   text-align: left; }
 
 form input {
   font-family: "Helvetica-Neue-Bold";
   font-size: 14px; }
   form input[type='text'], form input[type='password'] {
-    background-color: #efefed;
-    border: 1px solid #505050;
+    background-color: #f9f8f9;
+    border: 1px solid #328fc2;
     padding: .75rem;
-    width: 87%; }
+    width: 77%; }
   form input[type='submit'] {
-    background-color: cornflowerblue;
+    background-color: #650360;
     color: #f9f8f9;
     cursor: pointer;
-    padding: .75rem .95rem; }
-
-form p.login-btn {
-  text-align: right; }
-  form p.login-btn button.login {
-    margin-bottom: 0;
-    margin-right: 7px;
+    float: right;
+    margin-top: 20px;
+    padding: .75rem .95rem;
     width: 140px; }
+
+@media screen and (min-width: 300px) and (max-width: 480px) {
+  form p {
+    text-align: left; }
+  form label {
+    padding-bottom: 5px; }
+  form input[type='text'], form input[type='password'] {
+    width: 100%; } }
 
 .mobile-menu-button span i {
   color: whitesmoke;
@@ -468,19 +480,21 @@ nav.main-navigation {
     margin: 10px;
     text-align: center; }
   header .container nav.main-navigation {
-    border-bottom: 1px solid #cccccc;
+    background-color: #f9f8f9;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
     display: none;
     padding: 15px 0;
     position: absolute;
     width: 100%; }
     header .container nav.main-navigation ul li {
-      background-color: #ffffff;
+      background-color: #f9f8f9;
       float: none;
       width: 100%; }
       header .container nav.main-navigation ul li:hover {
-        background-color: cornflowerblue;
-        color: #f9f8f9; }
+        background-color: cornflowerblue; }
       header .container nav.main-navigation ul li a {
         color: black;
         padding-left: 15px;
-        text-align: left; } }
+        text-align: left; }
+        header .container nav.main-navigation ul li a:hover {
+          color: #f9f8f9; } }

@@ -13,12 +13,12 @@
 <body>
   <div class="overlay">
     <div class="login-modal">
-      <span class="close-modal-btn"><i class="fa fa-close"></i></span>
+      <a class="close-modal" href="#"><i class="fa fa-close"></i></a>
       <div class="login-container">
         <h2>Sign In To Your Account</h2>
-        <form onSubmit="return submitFormEntry()">
-          <p><label for="userNameInput">Username</label><input type="text" name="userNameInput" id="userNameInput" required /></p>
-          <p><label for="pwdInput">Password</label><input type="password" name="pwdInput" id="pwdInput" required /></p>
+        <form action="/" name="modalLogin">
+          <p><label for="userInput">Username </label><input type="text" name="userInput" id="userInput" required /></p>
+          <p><label for="pwdInput">Password </label><input type="password" name="pwdInput" id="pwdInput" required /></p>
             <input type="submit" class="login" value="Login" />
         </form>
       </div>
@@ -29,7 +29,15 @@
     <div class="container">
     <div class="logo">
       <a href="index.html">
-        <img src="assets/images/urbank.png" />
+        <!-- <img src="assets/images/urbank.png" /> -->
+
+        <img srcset="assets/images/urbank@2x.png 320w,
+                     assets/images/urbank.png 800w"
+             sizes="(max-width: 320px) 152px,
+                    (max-width:600px) 304px"
+     src="assets/images/urbank.png" alt="URBank Logo">
+
+
         <!-- <img srcset="assets/images/urbank.png 1200w, assets/images/urbank@2x.png  320w"
              sizes="(min-width: 36em) 152px, 37px" src="assets/images/urbank.png" alt="The URBANK Logo" /> -->
       </a>

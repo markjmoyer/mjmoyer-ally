@@ -13,10 +13,11 @@ jQuery(document).ready(function() {
   jQuery('.login').on('click', function(e) {
     e.preventDefault();
     jQuery('.overlay').show();
+    jQuery('.login-modal input[type="text"]').focus();
   });
 
   // login-modal close button functionality
-  jQuery('.close-modal-btn').on('click', function() {
+  jQuery('a.close-modal').on('click', function() {
     jQuery('.overlay').hide();
   });
 
