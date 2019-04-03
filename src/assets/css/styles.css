@@ -142,18 +142,15 @@ header {
     padding: 0 10px; } }
 
 @media screen and (max-width: 600px) {
-  .container .logo {
+  header .container .logo {
     float: none;
     text-align: center; }
-    .container .logo a img {
+    header .container .logo a img {
       width: 304px; }
-  .container nav.main-navigation {
-    float: none;
-    margin: 0 auto; }
-    .container nav.main-navigation ul {
-      text-align: center; }
-      .container nav.main-navigation ul li {
-        padding: 5px 2px; } }
+  header .container nav.main-navigation ul {
+    text-align: center; }
+    header .container nav.main-navigation ul li {
+      padding: 5px 2px; } }
 
 :root {
   font-size: 16px; }
@@ -408,6 +405,7 @@ footer {
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.7);
+  display: none;
   height: 100%;
   position: fixed;
   top: 0;
@@ -500,9 +498,11 @@ nav.main-navigation {
     background-color: #f9f8f9;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
     display: none;
+    float: none;
+    margin-left: -15px;
     padding: 15px 0;
     position: absolute;
-    width: 100%; }
+    width: 102%; }
     header .container nav.main-navigation ul li {
       background-color: #f9f8f9;
       float: none;
