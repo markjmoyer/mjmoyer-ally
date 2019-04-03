@@ -404,7 +404,7 @@ footer {
       padding: 1px 4px; } }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   display: none;
   height: 100%;
   position: fixed;
