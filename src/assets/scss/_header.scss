@@ -2,6 +2,7 @@ header {
   background-color: $blue-background;
   margin-bottom: 32px;
   overflow: hidden;
+  // padding: 0 10px;
 }
 
 .container {
@@ -11,6 +12,10 @@ header {
     a {
       display: block;
       padding-top: 1px;
+
+      img {
+        width: 152px;
+      }
     }
   }
 
@@ -40,17 +45,25 @@ header {
       }
   }
 }
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0 10px;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .container {
     .logo {
       float: none;
       text-align: center;
+
+      a img {
+        width: 304px;
+      }
     }
     nav.main-navigation {
       float: none;
       margin: 0 auto;
-      // width: 300px;
 
       ul {
         text-align: center;

@@ -1,4 +1,5 @@
 jQuery('.overlay').hide();
+jQuery('.tab-content.archive').hide();
 jQuery(document).ready(function() {
 
   //sidebar tab functionality
@@ -25,10 +26,12 @@ jQuery(document).ready(function() {
   if (jQuery(window).width() <= 768) {
     jQuery('.copyright-disclosure').appendTo('footer');
   }
+
   //mobile menu functionality
   jQuery('.mobile-menu-button').on('click', function() {
     jQuery('header nav.main-navigation').toggle();
   });
+
   // News tab content functionality
   jQuery("ul.nav-tabs li.news").on('click', function () {
     jQuery('ul.nav-tabs li.archive').addClass('activated');
@@ -37,6 +40,7 @@ jQuery(document).ready(function() {
     jQuery('.tab-content.archive').hide();
     jQuery('.tab-content.news').show();
   });
+
   // Archive tab functionality
   jQuery('.tab-content.archive').addClass('inactivated');
   jQuery('ul.nav-tabs li.archive').on('click', function () {
@@ -45,12 +49,9 @@ jQuery(document).ready(function() {
     jQuery('.tab-content.news').hide();
     jQuery('.tab-content.archive').show();
   });
-
-
-
 });
 
-// get the JSON and sort earnings while we're at it
+// get the JSON and sort by earnings while we're at it
 jQuery.getJSON("assets/data/code-test.json").done(function(data) {
 
   data.sort(function(a, b) {
@@ -75,15 +76,3 @@ function getBankData(data) {
     });
 
 }
-
-
-
-
-
-// cookie scripting for welcome-modal
-// if (!$.cookie('alert')) {
-//   jQuery('.welcome-modal').show();
-//   var date = new Date();
-//   date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
-//   $.cookie('alert', true, { expires: date });
-//  }

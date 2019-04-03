@@ -115,6 +115,8 @@ header {
   .container .logo a {
     display: block;
     padding-top: 1px; }
+    .container .logo a img {
+      width: 152px; }
 
 .container nav.main-navigation {
   float: right;
@@ -133,10 +135,16 @@ header {
       padding: 8px 0;
       text-decoration: none; }
 
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0 10px; } }
+
 @media screen and (max-width: 600px) {
   .container .logo {
     float: none;
     text-align: center; }
+    .container .logo a img {
+      width: 304px; }
   .container nav.main-navigation {
     float: none;
     margin: 0 auto; }
@@ -208,9 +216,11 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 300px) and (max-width: 768px) {
   .row .content {
     padding: 0 10px;
-    width: 100%; }
-    .row .content h1, .row .content h2 {
-      text-align: center; } }
+    width: 100%; } }
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+  h1, h2 {
+    text-align: center; } }
 
 .content .callout {
   background-color: #bbd8c4;
