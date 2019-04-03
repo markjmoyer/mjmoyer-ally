@@ -38,8 +38,12 @@ header {
           color: $white;
           display: block;
           font-family: $helvetica-neue-regular;
-          padding: 8px 0;
+          padding: 10px 0;
           text-decoration: none;
+
+          &:hover {
+            font-weight: bold;
+          }
         }
         }
       }

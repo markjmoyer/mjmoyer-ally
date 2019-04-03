@@ -132,8 +132,10 @@ header {
       color: #f9f8f9;
       display: block;
       font-family: "Helvetica-Neue-Regular";
-      padding: 8px 0;
+      padding: 10px 0;
       text-decoration: none; }
+      .container nav.main-navigation ul li a:hover {
+        font-weight: bold; }
 
 @media screen and (max-width: 768px) {
   header {
@@ -379,11 +381,9 @@ footer {
       padding: 1px 15px; }
     footer .container nav.main-navigation.footer ul li a {
       color: #328fc2;
-      padding: 0;
-      transition: all .3s; }
+      padding: 0; }
       footer .container nav.main-navigation.footer ul li a:hover {
-        color: #650360;
-        transition: all .3s; }
+        font-weight: bold; }
     footer .container nav.main-navigation.footer ul li:hover {
       background-color: transparent; }
   footer .copyright-disclosure {
