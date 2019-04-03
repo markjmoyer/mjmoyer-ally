@@ -107,7 +107,7 @@ table {
 
 header {
   background-color: cornflowerblue;
-  margin-bottom: 32px;
+  margin-bottom: 60px;
   overflow: hidden; }
 
 .container .logo {
@@ -214,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
       color: #505050;
       text-decoration: none; }
 
-@media screen and (min-width: 300px) and (max-width: 768px) {
+@media screen and (min-width: 300px) and (max-width: 855px) {
   .row .content {
     padding: 0 10px;
     width: 100%; } }
