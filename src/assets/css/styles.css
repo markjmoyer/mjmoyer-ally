@@ -261,6 +261,8 @@ button.login {
       float: left;
       padding: 15px 20px; }
       .sidebar .tab-container ul.nav-tabs li.inactivated {
+        background-color: #F5F5F5; }
+      .sidebar .tab-container ul.nav-tabs li.activated {
         background-color: #bbd8c4; }
   .sidebar .tab-container .tab-content {
     background-color: whitesmoke;

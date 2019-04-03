@@ -29,24 +29,21 @@ jQuery(document).ready(function() {
   jQuery('.mobile-menu-button').on('click', function() {
     jQuery('header nav.main-navigation').toggle();
   });
-
-  // tab functionality
-  // jQuery("ul.nav-tabs li").on('click', function () {
-  //   //Toggle particular element
-  //   jQuery('.tab-content').next('.tab-content.news').toggle();
-  //   //Hide all the elements but not the clicked one
-  //   jQuery('ul.nav-tabs li').next('.tab-content').not(jQuery(this).next('.tab-content.archive')).hide();
-  // });
-
-  jQuery('.tab-content.archive').addClass('inactive');
-  jQuery("ul.nav-tabs li.archive").on('click', function () {
-    //jQuery('.tab-content.news').addClass('inactive');
-    jQuery('.tab-content.news').hide();
-    jQuery('.tab-content.archive').show();
-  });
+  // News tab content functionality
   jQuery("ul.nav-tabs li.news").on('click', function () {
+    jQuery('ul.nav-tabs li.archive').addClass('activated');
+    jQuery('ul.nav-tabs li.news').removeClass('activated');
+    //jQuery('ul.nav-tabs li.news').addClass('activated');
     jQuery('.tab-content.archive').hide();
     jQuery('.tab-content.news').show();
+  });
+  // Archive tab functionality
+  jQuery('.tab-content.archive').addClass('inactivated');
+  jQuery('ul.nav-tabs li.archive').on('click', function () {
+    jQuery('ul.nav-tabs li.news').addClass('activated');
+    jQuery('ul.nav-tabs li.archive').removeClass('activated');
+    jQuery('.tab-content.news').hide();
+    jQuery('.tab-content.archive').show();
   });
 
 
