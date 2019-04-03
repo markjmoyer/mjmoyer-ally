@@ -1,17 +1,27 @@
-.sidebar {
+.active {
+  display: block;
+}
 
-  button {
+.inactive {
+  display: none;
+}
 
-    &.login {
-      background-color: $purple-text;
-      color: $white;
-      font-family: $helvetica-neue-bold;
-      font-size: 18px;
-      margin-bottom: 35px;
-      padding: 7px 0;
-      width: 100%;
-    }
+button {
+
+  &.login {
+    background-color: $purple-text;
+    color: $white;
+    cursor: pointer;
+    font-family: $helvetica-neue-bold;
+    font-size: 18px;
+    margin-bottom: 35px;
+    padding: 7px 0;
+    width: 100%;
   }
+}
+
+.sidebar {
+  width: 27.5%;
 
   .tab-container {
 
@@ -23,10 +33,7 @@
         float: left;
         padding: 15px 20px;
 
-        // &:hover {
-        //   background-color: $green-background;
-        // }
-        &.inactive {
+        &.inactivated {
           background-color: $green-background;
         }
       }
@@ -38,7 +45,7 @@
       width: 100%;
 
       &.news {
-
+        display: block;
 
         ul {
         margin-bottom: 35px;
@@ -59,15 +66,38 @@
           color: $blue-text;
           font-family: $helvetica-neue-bold;
           text-decoration: none;
+          transition: all .3s;
+
+          &:hover {
+            color: $purple-text;
+            transition: all .3s;
+          }
         }
       }
 
-      &.archive a {
-        color: $blue-text;
-        font-family: $helvetica-neue-bold;
-        line-height: 26px;
-        text-decoration: none;
+      &.archive {
+
+        a {
+          color: $blue-text;
+          font-family: $helvetica-neue-bold;
+          line-height: 32px;
+          text-decoration: none;
+          transition: all .3s;
+
+          &:hover {
+            color: $purple-text;
+            transition: all .3s;
+          }
+        }
       }
     }
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  .row .sidebar {
+    float: none;
+    margin: 0 auto;
+    width: 320px;
   }
 }

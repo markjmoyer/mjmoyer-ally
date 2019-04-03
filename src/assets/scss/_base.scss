@@ -77,3 +77,14 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  .row .content {
+    padding: 0 10px;
+    width: 100%;
+
+    h1, h2 {
+      text-align: center;
+    }
+  }
+}

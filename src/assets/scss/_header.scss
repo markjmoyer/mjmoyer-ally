@@ -10,7 +10,6 @@ header {
 
     a {
       display: block;
-      padding-bottom: 3px;
       padding-top: 1px;
     }
   }
@@ -34,10 +33,32 @@ header {
           color: $white;
           display: block;
           font-family: $helvetica-neue-regular;
-          padding: 8px 0 5px;
+          padding: 8px 0;
           text-decoration: none;
         }
         }
       }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    .logo {
+      float: none;
+      text-align: center;
+    }
+    nav.main-navigation {
+      float: none;
+      margin: 0 auto;
+      // width: 300px;
+
+      ul {
+        text-align: center;
+
+        li {
+          padding: 5px 2px;
+        }
+      }
+    }
   }
 }

@@ -89,6 +89,7 @@ table {
 
 .row {
   margin: 0;
+  overflow: hidden;
   padding: 0;
   width: 100%; }
   .row .column {
@@ -100,6 +101,10 @@ table {
     margin-left: 1em;
     width: 28.25%; }
 
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .row .sidebar {
+    width: 27.5%; } }
+
 header {
   background-color: cornflowerblue;
   margin-bottom: 32px;
@@ -109,7 +114,6 @@ header {
   float: left; }
   .container .logo a {
     display: block;
-    padding-bottom: 3px;
     padding-top: 1px; }
 
 .container nav.main-navigation {
@@ -126,8 +130,20 @@ header {
       color: #f9f8f9;
       display: block;
       font-family: "Helvetica-Neue-Regular";
-      padding: 8px 0 5px;
+      padding: 8px 0;
       text-decoration: none; }
+
+@media screen and (max-width: 600px) {
+  .container .logo {
+    float: none;
+    text-align: center; }
+  .container nav.main-navigation {
+    float: none;
+    margin: 0 auto; }
+    .container nav.main-navigation ul {
+      text-align: center; }
+      .container nav.main-navigation ul li {
+        padding: 5px 2px; } }
 
 :root {
   font-size: 16px; }
@@ -189,6 +205,13 @@ h1, h2, h3, h4, h5, h6 {
       color: #505050;
       text-decoration: none; }
 
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  .row .content {
+    padding: 0 10px;
+    width: 100%; }
+    .row .content h1, .row .content h2 {
+      text-align: center; } }
+
 .content .callout {
   background-color: #bbd8c4;
   margin-bottom: 40px;
@@ -200,72 +223,264 @@ h1, h2, h3, h4, h5, h6 {
     color: #650360;
     padding: 5px 0 0; }
   .content .callout .callout-copy {
-    width: 550px; }
+    width: 80%; }
   .content .callout .callout-img {
     position: absolute;
     right: 20px;
     top: -80px; }
 
-.sidebar button.login {
+@media screen and (min-width: 300px) and (max-width: 550px) {
+  .content .callout .callout-copy {
+    padding-top: 0;
+    width: 50%; }
+  .content .callout .callout-img {
+    top: 14px; } }
+
+.active {
+  display: block; }
+
+.inactive {
+  display: none; }
+
+button.login {
   background-color: #650360;
   color: #f9f8f9;
+  cursor: pointer;
   font-family: "Helvetica-Neue-Bold";
   font-size: 18px;
   margin-bottom: 35px;
   padding: 7px 0;
   width: 100%; }
 
-.sidebar .tab-container ul.nav-tabs {
-  overflow: hidden; }
-  .sidebar .tab-container ul.nav-tabs li {
+.sidebar {
+  width: 27.5%; }
+  .sidebar .tab-container ul.nav-tabs {
+    overflow: hidden; }
+    .sidebar .tab-container ul.nav-tabs li {
+      background-color: whitesmoke;
+      float: left;
+      padding: 15px 20px; }
+      .sidebar .tab-container ul.nav-tabs li.inactivated {
+        background-color: #bbd8c4; }
+  .sidebar .tab-container .tab-content {
     background-color: whitesmoke;
-    float: left;
-    padding: 15px 20px; }
-    .sidebar .tab-container ul.nav-tabs li.inactive {
-      background-color: #bbd8c4; }
+    padding: 25px 15px 15px;
+    width: 100%; }
+    .sidebar .tab-container .tab-content.news {
+      display: block; }
+      .sidebar .tab-container .tab-content.news ul {
+        margin-bottom: 35px; }
+      .sidebar .tab-container .tab-content.news ul li {
+        color: #505050;
+        font-family: "Helvetica-Neue-Regular";
+        font-size: 16px;
+        line-height: 22px; }
+        .sidebar .tab-container .tab-content.news ul li:first-child {
+          padding-bottom: 5px; }
+      .sidebar .tab-container .tab-content.news ul li a {
+        color: #328fc2;
+        font-family: "Helvetica-Neue-Bold";
+        text-decoration: none;
+        transition: all .3s; }
+        .sidebar .tab-container .tab-content.news ul li a:hover {
+          color: #650360;
+          transition: all .3s; }
+    .sidebar .tab-container .tab-content.archive a {
+      color: #328fc2;
+      font-family: "Helvetica-Neue-Bold";
+      line-height: 32px;
+      text-decoration: none;
+      transition: all .3s; }
+      .sidebar .tab-container .tab-content.archive a:hover {
+        color: #650360;
+        transition: all .3s; }
 
-.sidebar .tab-container .tab-content {
-  background-color: whitesmoke;
-  padding: 25px 15px 15px;
-  width: 100%; }
-  .sidebar .tab-container .tab-content.news ul {
-    margin-bottom: 35px; }
-  .sidebar .tab-container .tab-content.news ul li {
-    color: #505050;
-    font-family: "Helvetica-Neue-Regular";
-    font-size: 16px;
-    line-height: 22px; }
-    .sidebar .tab-container .tab-content.news ul li:first-child {
-      padding-bottom: 5px; }
-  .sidebar .tab-container .tab-content.news ul li a {
-    color: #328fc2;
-    font-family: "Helvetica-Neue-Bold";
-    text-decoration: none; }
-  .sidebar .tab-container .tab-content.archive a {
-    color: #328fc2;
-    font-family: "Helvetica-Neue-Bold";
-    line-height: 26px;
-    text-decoration: none; }
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  .row .sidebar {
+    float: none;
+    margin: 0 auto;
+    width: 320px; } }
+
+.table-heading {
+  font-family: "Helvetica-Neue-Light";
+  font-size: 12px;
+  margin-top: 35px;
+  text-align: right; }
+  .table-heading span {
+    display: inline-block;
+    padding-bottom: 10px; }
+    .table-heading span.bank-name {
+      width: 50%; }
+    .table-heading span.bank-apy {
+      text-align: center;
+      width: 24%; }
+    .table-heading span.bank-earnings {
+      text-align: right;
+      width: 24%; }
 
 .bank-data-table {
   background-color: #eef5f0;
-  margin-top: 35px;
   width: 100%; }
   .bank-data-table .table-row {
     padding: 15px; }
     .bank-data-table .table-row span {
       display: inline-block; }
       .bank-data-table .table-row span.bank-name {
-        width: 400px; }
+        width: 61%; }
       .bank-data-table .table-row span.bank-apy {
-        width: 120px; }
+        width: 19.5%; }
       .bank-data-table .table-row span.bank-earnings {
         text-align: right;
-        width: 120px; }
+        width: 19.5%; }
+    .bank-data-table .table-row:first-child {
+      font-family: "Helvetica-Neue-Bold"; }
     .bank-data-table .table-row:nth-child(even) {
       background-color: #ddebe1; }
 
+.table-footer {
+  text-align: right; }
+  .table-footer span.disclaimer {
+    display: inline-block;
+    font-family: "Helvetica-Neue-Light";
+    font-size: 12px;
+    padding-top: 10px; }
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  .table-heading span.bank-name {
+    width: 35%; } }
+
+@media screen and (min-width: 300px) and (max-width: 480px) {
+  .bank-data-table .table-row {
+    font-size: 13px; } }
+
 footer {
   background-color: #e7e8e9;
+  color: #328fc2;
   overflow: hidden;
+  padding-bottom: 50px;
+  padding-top: 20px;
   width: 100%; }
+  footer .container {
+    overflow: hidden; }
+    footer .container nav.main-navigation.footer ul li a {
+      color: #328fc2;
+      padding: 0;
+      transition: all .3s; }
+      footer .container nav.main-navigation.footer ul li a:hover {
+        color: #650360;
+        transition: all .3s; }
+    footer .container nav.main-navigation.footer ul li:hover {
+      background-color: transparent; }
+  footer .copyright-disclosure {
+    float: left;
+    text-align: left;
+    width: 50%; }
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  footer .copyright-disclosure {
+    float: none;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%; }
+  footer nav.main-navigation.footer {
+    float: none;
+    margin: 0 auto;
+    width: 320px; }
+    footer nav.main-navigation.footer ul li {
+      padding: 5px; } }
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9; }
+  .overlay .login-modal {
+    background-color: #f9f8f9;
+    border: 1px solid #464646;
+    color: #464646;
+    left: 0;
+    margin: 0 auto;
+    max-width: 660px;
+    min-width: 300px;
+    padding: 30px;
+    position: fixed;
+    right: 0;
+    top: 120px; }
+    .overlay .login-modal .login-container h2 {
+      font-family: "Helvetica-Neue-Light";
+      font-size: 28px;
+      padding: 15px 0 30px; }
+    .overlay .login-modal span {
+      cursor: pointer;
+      height: 30px;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      width: 30px; }
+      .overlay .login-modal span i {
+        color: #328fc2;
+        font-family: FontAwesome;
+        font-size: 28px; }
+
+form p {
+  padding: 10px 0; }
+
+form label {
+  display: inline-block;
+  font-family: "Helvetica-Neue-Bold";
+  font-size: 14px;
+  text-align: left; }
+
+form input {
+  font-family: "Helvetica-Neue-Bold";
+  font-size: 14px; }
+  form input[type='text'], form input[type='password'] {
+    background-color: #efefed;
+    border: 1px solid #505050;
+    padding: .75rem;
+    width: 87%; }
+  form input[type='submit'] {
+    background-color: cornflowerblue;
+    color: #f9f8f9;
+    cursor: pointer;
+    padding: .75rem .95rem; }
+
+form p.login-btn {
+  text-align: right; }
+  form p.login-btn button.login {
+    margin-bottom: 0;
+    margin-right: 7px;
+    width: 140px; }
+
+.mobile-menu-button span i {
+  color: whitesmoke;
+  display: none;
+  font-size: 32px; }
+
+nav.main-navigation {
+  display: block; }
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .mobile-menu-button span i {
+    display: block;
+    margin: 10px;
+    text-align: center; }
+  header .container nav.main-navigation {
+    border-bottom: 1px solid #cccccc;
+    display: none;
+    padding: 15px 0;
+    position: absolute;
+    width: 100%; }
+    header .container nav.main-navigation ul li {
+      background-color: #ffffff;
+      float: none;
+      width: 100%; }
+      header .container nav.main-navigation ul li:hover {
+        background-color: cornflowerblue;
+        color: #f9f8f9; }
+      header .container nav.main-navigation ul li a {
+        color: black;
+        padding-left: 15px;
+        text-align: left; } }

@@ -11,145 +11,130 @@
 
 </head>
 <body>
+  <div class="overlay">
+    <div class="login-modal">
+      <span class="close-modal-btn"><i class="fa fa-close"></i></span>
+      <div class="login-container">
+        <h2>Sign In To Your Account</h2>
+        <form onSubmit="return submitFormEntry()">
+          <p><label for="userNameInput">Username</label><input type="text" name="userNameInput" id="userNameInput" required /></p>
+          <p><label for="pwdInput">Password</label><input type="password" name="pwdInput" id="pwdInput" required /></p>
+            <input type="submit" class="login" value="Login" />
+        </form>
+      </div>
+    </div>
+  </div>
+<div class="page-wrapper">
+  <header>
+    <div class="container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/urbank.png" />
+        <!-- <img srcset="assets/images/urbank.png 1200w, assets/images/urbank@2x.png  320w"
+             sizes="(min-width: 36em) 152px, 37px" src="assets/images/urbank.png" alt="The URBANK Logo" /> -->
+      </a>
+    </div>
+    <div class="mobile-menu-button"><span><i class="fa fa-bars"></i></span></div>
+    <nav class="main-navigation">
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">employee</a></li>
+        <li><a href="#">company</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+<div class="container">
+  <div class="row">
+    <div class="column content">
+      <h1>best bank ever</h1>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</p>
+      <h3>Reasons We&rsquo;re Awesome:</h3>
+      <ul>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+      </ul>
+      <div class="callout">
+        <div class="callout-copy">
+          <h3>Amazing Mobile Info</h3>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+        </div>
+        <div class="callout-img">
+          <img src="assets/images/iphone.png" />
+        </div>
+      </div>
+      <h2><span>Rates </span> Check Them Out</h2>
+      <div class="table-heading">
+        <span class="bank-name">&nbsp;</span>
+        <span class="bank-apy">Annual Percentage Yield</span>
+        <span class="bank-earnings">Est. Earnings for 1 Year*</span>
+      </div>
+      <div class="bank-data-table"><!-- JSON Data ARRIVES Here --></div>
+      <div class="table-footer"><span class="disclaimer">*Based on $50,000 deposit.</span></div>
+    </div>
 
-        <header>
-          <div class="container">
-          <div class="logo">
-            <a href="index.html">
-              <img src="assets/images/urbank.png" />
-              <!-- <img srcset="assets/images/urbank.png 1200w, assets/images/urbank@2x.png  320w"
-                   sizes="(min-width: 36em) 152px, 37px" src="assets/images/urbank.png" alt="The URBANK Logo" /> -->
-            </a>
-          </div>
-          <nav class="main-navigation">
+    <div class="column sidebar">
+      <button class="login">Login</button>
+      <div class="tab-container">
+        <ul class="nav-tabs">
+          <li class="news"><a>News</a></li>
+          <li class="archive inactivated"><a>Archive</a></li>
+        </ul>
+        <div class="tab-content news active">
+          <ul>
+            <li><a href="#">Lorem ipsum doler</a></li>
+            <li>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis</li>
+          </ul>
+          <ul>
+            <li><a href="#">Lorem ipsum doler</a></li>
+            <li>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis</li>
+          </ul>
+          <ul>
+            <li><a href="#">Lorem ipsum doler</a></li>
+            <li>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis</li>
+          </ul>
+        </div>
+        <div class="tab-content archive">
             <ul>
-              <li><a href="#">home</a></li>
-              <li><a href="#">employee</a></li>
-              <li><a href="#">company</a></li>
-              <li><a href="#">services</a></li>
-              <li><a href="#">contact</a></li>
+              <li><a href="#">Lorem ipsum doler</a></li>
+              <li><a href="#">Lorem ipsum doler</a></li>
+              <li><a href="#">Lorem ipsum doler</a></li>
+              <li><a href="#">Lorem ipsum doler</a></li>
+              <li><a href="#">Lorem ipsum doler</a></li>
+              <li><a href="#">Lorem ipsum doler</a></li>
+              <li><a href="#">Lorem ipsum doler</a></li>
+              <li><a href="#">Lorem ipsum doler</a></li>
             </ul>
-          </nav>
-          </div>
-        </header>
-      <div class="container">
-        <div class="row">
-          <div class="column content">
-            <h1>best bank ever</h1>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</p>
-            <h3>Reasons We&rsquo;re Awesome:</h3>
-            <ul>
-              <li>Lorem ipsum dolor sit amet</li>
-              <li>Lorem ipsum dolor sit amet</li>
-              <li>Lorem ipsum dolor sit amet</li>
-              <li>Lorem ipsum dolor sit amet</li>
-              <li>Lorem ipsum dolor sit amet</li>
-            </ul>
-            <div class="callout">
-              <div class="callout-copy">
-                <h3>Amazing Mobile Info</h3>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
-              </div>
-              <div class="callout-img">
-                <img src="assets/images/iphone.png" />
-              </div>
-
-            </div>
-            <h2><span>Rates </span> Check Them Out</h2>
-            <div class="bank-data-table"></div>
-          </div>
-
-          <div class="column sidebar">
-            <button class="login">Login</button>
-            <div class="tab-container">
-              <ul class="nav-tabs">
-                <li><a>News</a></li>
-                <li class="inactive"><a>Archive</a></li>
-              </ul>
-              <div class="tab-content news">
-                <ul>
-                  <li><a href="#">Lorem ipsum doler</a></li>
-                  <li>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis</li>
-                </ul>
-                <ul>
-                  <li><a href="#">Lorem ipsum doler</a></li>
-                  <li>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis</li>
-                </ul>
-                <ul>
-                  <li><a href="#">Lorem ipsum doler</a></li>
-                  <li>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis</li>
-                </ul>
-              </div>
-
-              <div class="tab-content archive">
-                  <ul>
-                    <li><a href="#">Lorem ipsum doler</a></li>
-                    <li><a href="#">Lorem ipsum doler</a></li>
-                    <li><a href="#">Lorem ipsum doler</a></li>
-                    <li><a href="#">Lorem ipsum doler</a></li>
-                    <li><a href="#">Lorem ipsum doler</a></li>
-                    <li><a href="#">Lorem ipsum doler</a></li>
-                    <li><a href="#">Lorem ipsum doler</a></li>
-                    <li><a href="#">Lorem ipsum doler</a></li>
-                  </ul>
-
-              </div>
-
-            </div>
-          </div>
         </div>
 
-      </div>
+      </div><!-- end .tab-container -->
+    </div><!-- end .sidebar -->
+  </div><!-- end .row -->
+
+</div><!-- end .container -->
 <footer>
-  <div class="container">
-    <div class="copyright-disclosure">&copy;2019 Urbank.com</div>
+<div class="container">
+<div class="copyright-disclosure">&copy;2019 URBank.com</div>
 
-      <nav class="main-navigation">
-        <ul>
-          <li><a href="#">home</a></li>
-          <li><a href="#">employee</a></li>
-          <li><a href="#">company</a></li>
-          <li><a href="#">services</a></li>
-          <li><a href="#">contact</a></li>
-        </ul>
-      </nav>
+<nav class="main-navigation footer">
+  <ul>
+    <li><a href="#">home</a></li>
+    <li><a href="#">employee</a></li>
+    <li><a href="#">company</a></li>
+    <li><a href="#">services</a></li>
+    <li><a href="#">contact</a></li>
+  </ul>
+</nav>
 
-  </div>
+</div><!-- end footer .container -->
 </footer>
+</div><!-- end .page-wrapper -->
+
 <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>
-
-
-<!-- <div class="overlay">&nbsp;
-  <div class="welcome-modal">
-    <span class="close-modal-btn"><i class="fa fa-close"></i></span>
-    <h2>Thanks for reviewing my work!</h2>
-    <p>Your time means a bunch to me and I understand the careful attention you're giving my code and demeanor.</p>
-    <p>This file is built and compiled using Gulp! A time-saver for me that allows me to automate much of the front-end workflow for us!</p>
-    <p>Please, launch index.html from the ../dist/.. folder to view the results in the browser. When choosing to review Mark's code, please refer to files in the ../src/.. folder. Setup instructions/documentation are in README.md</p>
-    <p>Thanks again for your time, the opportunity and (of course) your careful consideration with regards to my work on this project.</p>
-    <author>Mark</author>
-    <p>
-      PS: This site uses a cookie allowing for the "Welcome Modal" once per 24hrs. Hardly GDPR compliant but developed with you in mind.
-    </p>
-</div>
-</div> -->
-
-<!-- <div class="login-container">
-  <form onSubmit="return submitFormEntry()">
-    <p>
-      <label for="userNameInput">Username:</label>
-      <input type="text" name="userNameInput" id="userNameInput" placeholder="Enter username" required />
-    </p>
-
-    <p>
-      <label for="pwdInput">Password:</label>
-      <input type="password" name="pwdInput" id="pwdInput" required />
-    </p>
-
-    <p>
-      <button type="submit">Submit</button>
-    </p>
-  </form>
-</div> -->

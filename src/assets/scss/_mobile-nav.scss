@@ -1,0 +1,46 @@
+.mobile-menu-button span i {
+  color: $light-grey;
+  display: none;
+  font-size: 32px;
+}
+nav.main-navigation {
+  display: block;
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .mobile-menu-button span i {
+    display: block;
+    margin: 10px;
+    text-align: center;
+
+  }
+  header .container {
+    nav.main-navigation {
+      border-bottom: 1px solid #cccccc;
+      display: none;
+      padding: 15px 0;
+      position: absolute;
+      width: 100%;
+
+      ul {
+        li {
+          background-color: #ffffff;
+          float: none;
+          width: 100%;
+
+          &:hover {
+            background-color: $blue-background;
+            color: $white;
+          }
+
+          a {
+            color: $black;
+            padding-left: 15px;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,18 +1,68 @@
+jQuery('.overlay').hide();
+jQuery(document).ready(function() {
 
+  //sidebar tab functionality
+  jQuery('.nav-tabs li').on('click', function(e) {
+    e.preventDefault();
+    jQuery('.nav-tabs li').removeClass('inactivated');
+    jQuery(this).toggleClass('inactivated');
+  });
+
+  // login-modal functionality
+  jQuery('.overlay').hide();
+  jQuery('.login').on('click', function(e) {
+    e.preventDefault();
+    jQuery('.overlay').show();
+  });
+
+  // login-modal close button functionality
+  jQuery('.close-modal-btn').on('click', function() {
+    jQuery('.overlay').hide();
+  });
+
+  // place the copyright text under main navigation at 550px
+  if (jQuery(window).width() <= 768) {
+    jQuery('.copyright-disclosure').appendTo('footer');
+  }
+  //mobile menu functionality
+  jQuery('.mobile-menu-button').on('click', function() {
+    jQuery('header nav.main-navigation').toggle();
+  });
+
+  // tab functionality
+  // jQuery("ul.nav-tabs li").on('click', function () {
+  //   //Toggle particular element
+  //   jQuery('.tab-content').next('.tab-content.news').toggle();
+  //   //Hide all the elements but not the clicked one
+  //   jQuery('ul.nav-tabs li').next('.tab-content').not(jQuery(this).next('.tab-content.archive')).hide();
+  // });
+
+  jQuery('.tab-content.archive').addClass('inactive');
+  jQuery("ul.nav-tabs li.archive").on('click', function () {
+    //jQuery('.tab-content.news').addClass('inactive');
+    jQuery('.tab-content.news').hide();
+    jQuery('.tab-content.archive').show();
+  });
+  jQuery("ul.nav-tabs li.news").on('click', function () {
+    jQuery('.tab-content.archive').hide();
+    jQuery('.tab-content.news').show();
+  });
+
+
+
+});
+
+// get the JSON and sort earnings while we're at it
 jQuery.getJSON("assets/data/code-test.json").done(function(data) {
 
+  data.sort(function(a, b) {
+  	return b.earnings - a.earnings;
+  });
   getBankData(data);
 
 });
 
-//sort the data
-
 function getBankData(data) {
-  var sortedEarnings = [];
-  jQuery.each(data, function(s, sortEarnings){
-      sortedEarnings.push(sortEarnings);
-  });
-  return (function(sortedVehicles){
 
     jQuery.each(data, function(x, data) {
       var bankName = data.name;
@@ -25,46 +75,12 @@ function getBankData(data) {
         console.log(bankName + " " + bankAPY + " " + bankEarnings);
 
     });
-  })(sortedEarnings);
 
 }
 
 
 
 
-
-
-
-
-
-
-  //console.log(data.name);
-
-
-
-
-
-jQuery(document).ready(function() {
-  //var bankDataFile = "assets/data/code-test.json";
-
-  // sidebar tab functionality
-  jQuery('.nav-tabs li').on('click', function() {
-    jQuery('.nav-tabs li').removeClass('inactive');
-    jQuery(this).toggleClass('inactive');
-  });
-
-  // did everything run? Maybe...
-  console.log('Everythings fired up!');
-
-});
-
-
-// welcome-modal scripting
-// jQuery('.welcome-modal').show();
-// jQuery('.close-modal-btn').on('click', function(e) {
-//   e.preventDefault();
-//   jQuery('.welcome-modal, .overlay').hide();
-// });
 
 // cookie scripting for welcome-modal
 // if (!$.cookie('alert')) {

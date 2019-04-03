@@ -1,30 +1,44 @@
-label {
-  display: block;
-  text-align: left;
-}
-
-input {
-  font-size: 18px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-
-  &::placeholder {
-    color: $blue-background;
+form {
+  p {
+    padding: 10px 0
   }
 
-  &[type='text'],
-  &[type='password'] {
-    background-color: #efefed;
-    border: 1px solid $grey;
-    padding: .75rem;
-    width: 90%;
+  label {
+    display: inline-block;
+    font-family: $helvetica-neue-bold;
+    font-size: 14px;
+    text-align: left;
   }
 
-  &[type='submit'] {
-    background-color: $blue-background;
-    color: $white;
-    cursor: pointer;
-    padding: .75rem .95rem;
+  input {
+    font-family: $helvetica-neue-bold;
+    font-size: 14px;
+
+    &[type='text'],
+    &[type='password'] {
+      background-color: #efefed;
+      border: 1px solid $grey;
+      padding: .75rem;
+      width: 87%;
+    }
+
+    &[type='submit'] {
+      background-color: $blue-background;
+      color: $white;
+      cursor: pointer;
+
+      padding: .75rem .95rem;
+    }
+  }
+
+
+  p.login-btn {
+    text-align: right;
+
+    button.login {
+      margin-bottom: 0;
+      margin-right:7px;
+      width: 140px;
+    }
   }
 }

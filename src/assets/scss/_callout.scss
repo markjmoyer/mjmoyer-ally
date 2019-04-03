@@ -14,15 +14,29 @@
     }
 
     .callout-copy {
-      // float: left;
-      width: 550px;
+      width: 80%;
     }
 
     .callout-img {
-      // float: right;
       position: absolute;
       right: 20px;
       top: -80px;
     }
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+  .content {
+    .callout {
+
+    .callout-copy {
+      padding-top: 0;
+      width: 50%;
+    }
+
+    .callout-img {
+      top: 14px;
+    }
+  }
   }
 }
