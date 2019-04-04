@@ -68,7 +68,8 @@ function getBankData(data) {
       var bankAPY = data.apy + " %";
       var bankEarnings = "$" + parseFloat(data.earnings).toFixed(2);
 
-      var bankData = '<div class="table-row"><span class="bank-name">'+bankName+'</span><span class="bank-apy">'+bankAPY+'</span><span class="bank-earnings">'+bankEarnings+'</span></div>';
+      //var bankData = '<div class="table-row"><span class="bank-name">'+bankName+'</span><span class="bank-apy">'+bankAPY+'</span><span class="bank-earnings">'+bankEarnings+'</span></div>';
+      var bankData = '<tr><td width="52%" class="bank-name">'+bankName+'</td><td width="24%" class="bank-apy">'+bankAPY+'</td><td width="24%" class="bank-earnings">'+bankEarnings+'</td></tr>'
 
         jQuery('.bank-data-table').append(bankData);
         console.log(bankName + " " + bankAPY + " " + bankEarnings);

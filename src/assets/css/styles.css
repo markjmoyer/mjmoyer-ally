@@ -315,22 +315,56 @@ button.login {
     margin: 0 auto;
     width: 320px; } }
 
-.table-heading {
-  font-family: "Helvetica-Neue-Light";
-  font-size: 12px;
+table,
+thead {
   margin-top: 35px;
-  text-align: right; }
-  .table-heading span {
-    display: inline-block;
-    padding-bottom: 10px; }
-    .table-heading span.bank-name {
-      width: 50%; }
-    .table-heading span.bank-apy {
-      text-align: center;
-      width: 24%; }
-    .table-heading span.bank-earnings {
-      text-align: right;
-      width: 24%; }
+  width: 100%; }
+  table tr th,
+  thead tr th {
+    background-color: white;
+    color: #545454;
+    font-family: "Helvetica-Neue-Light";
+    font-size: 12px;
+    margin-top: 35px; }
+    table tr th.bank-name,
+    thead tr th.bank-name {
+      padding-bottom: 10px;
+      padding-left: 15px;
+      text-align: left; }
+    table tr th.bank-apy,
+    thead tr th.bank-apy {
+      padding-bottom: 10px;
+      text-align: center; }
+    table tr th.bank-earnings,
+    thead tr th.bank-earnings {
+      padding-bottom: 10px;
+      padding-right: 15px;
+      text-align: right; }
+
+tr {
+  width: 100%; }
+  tr:first-child {
+    font-family: "Helvetica-Neue-Bold"; }
+  tr:nth-child(odd) {
+    background-color: #ddebe1; }
+  tr:nth-child(even) {
+    background-color: #eef5f0; }
+  tr td {
+    border: 1px solid #333;
+    padding: 12px 0; }
+    tr td.bank-name {
+      padding-left: 15px;
+      text-align: left; }
+    tr td.bank-apy {
+      text-align: center; }
+    tr td.bank-earnings {
+      padding-right: 15px;
+      text-align: right; }
+
+thead,
+tfoot {
+  background-color: #333;
+  color: #fff; }
 
 .bank-data-table {
   background-color: #eef5f0;
