@@ -76,38 +76,6 @@ tfoot {
     color: #fff;
 }
 
-.bank-data-table {
-  background-color: $lt-green;
-  width: 100%;
-
-  .table-row {
-    padding: 15px;
-
-    span {
-      display: inline-block;
-
-      &.bank-name {
-        width: 61%;
-      }
-
-      &.bank-apy {
-        width: 19.5%;
-      }
-
-      &.bank-earnings {
-        text-align: right;
-        width: 19.5%;
-      }
-    }
-    &:first-child {
-      font-family: $helvetica-neue-bold;
-    }
-    &:nth-child(even) {
-      background-color: $dk-green;
-    }
-  }
-}
-
 .table-footer {
   text-align: right;
 
@@ -115,6 +83,7 @@ tfoot {
     display: inline-block;
     font-family: $helvetica-neue-light;
     font-size: 12px;
+        padding-right: 15px;
     padding-top: 10px;
   }
 }

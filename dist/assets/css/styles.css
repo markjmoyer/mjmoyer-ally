@@ -367,31 +367,13 @@ tfoot {
   background-color: #333;
   color: #fff; }
 
-.bank-data-table {
-  background-color: #eef5f0;
-  width: 100%; }
-  .bank-data-table .table-row {
-    padding: 15px; }
-    .bank-data-table .table-row span {
-      display: inline-block; }
-      .bank-data-table .table-row span.bank-name {
-        width: 61%; }
-      .bank-data-table .table-row span.bank-apy {
-        width: 19.5%; }
-      .bank-data-table .table-row span.bank-earnings {
-        text-align: right;
-        width: 19.5%; }
-    .bank-data-table .table-row:first-child {
-      font-family: "Helvetica-Neue-Bold"; }
-    .bank-data-table .table-row:nth-child(even) {
-      background-color: #ddebe1; }
-
 .table-footer {
   text-align: right; }
   .table-footer span.disclaimer {
     display: inline-block;
     font-family: "Helvetica-Neue-Light";
     font-size: 12px;
+    padding-right: 15px;
     padding-top: 10px; }
 
 @media screen and (min-width: 300px) and (max-width: 768px) {
@@ -464,15 +446,16 @@ footer {
       padding: 15px 0 30px; }
     .overlay .login-modal a.close-modal {
       cursor: pointer;
-      height: 30px;
+      display: block;
+      height: 15px;
       position: absolute;
-      right: 20px;
+      right: 15px;
       top: 15px;
-      width: 30px; }
-      .overlay .login-modal a.close-modal i {
-        color: #328fc2;
-        font-family: FontAwesome;
-        font-size: 28px; }
+      width: 16px;
+      text-align: right; }
+      .overlay .login-modal a.close-modal img {
+        height: 15px;
+        width: 16px; }
 
 @media screen and (min-width: 300px) and (max-width: 480px) {
   .overlay .login-modal {

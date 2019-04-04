@@ -31,18 +31,34 @@
 
     a.close-modal {
       cursor: pointer;
-      height: 30px;
+      display: block;
+      height: 15px;
       position: absolute;
-      right: 20px;
+      right: 15px;
       top: 15px;
-      width: 30px;
+      width: 16px;
+      text-align: right;
 
-      i {
-        color: #328fc2;
-        font-family: $font-awesome;
-        font-size: 28px;
+      img {
+        height: 15px;
+        width: 16px;
       }
-    }
+      }
+
+    // a.close-modal {
+    //   cursor: pointer;
+    //   height: 30px;
+    //   position: absolute;
+    //   right: 20px;
+    //   top: 15px;
+    //   width: 31px;
+    //
+    //   i {
+    //     color: #328fc2;
+    //     font-family: $font-awesome;
+    //     font-size: 28px;
+    //   }
+    // }
   }
 }
 
