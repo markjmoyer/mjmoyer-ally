@@ -343,8 +343,6 @@ thead {
 
 tr {
   width: 100%; }
-  tr:first-child {
-    font-family: "Helvetica-Neue-Bold"; }
   tr:nth-child(odd) {
     background-color: #ddebe1; }
   tr:nth-child(even) {
@@ -360,6 +358,9 @@ tr {
     tr td.bank-earnings {
       padding-right: 15px;
       text-align: right; }
+
+tr:nth-child(2) {
+  font-family: "Helvetica-Neue-Bold"; }
 
 thead,
 tfoot {
